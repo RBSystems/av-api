@@ -16,6 +16,9 @@ func (p *PowerDefault) GetDevices(room accessors.Room) ([]accessors.Device, erro
 }
 
 func (p *PowerDefault) GenerateCommands(devices []accessors.Device) ([]StatusCommand, error) {
+
+	log.Printf("Generating default power commands...")
+
 	var output []StatusCommand
 
 	//iterate over each device
