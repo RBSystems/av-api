@@ -2,7 +2,6 @@ package status
 
 import (
 	"log"
-	"strings"
 
 	"github.com/byuoitav/configuration-database-microservice/accessors"
 )
@@ -43,7 +42,7 @@ func (p *VolumeDefault) GenerateCommands(devices []accessors.Device) ([]StatusCo
 
 		for _, command := range device.Commands {
 
-			if strings.HasPrefix(command.Name, FLAG) {
+			if command.Name == "STATUS_Volume" {
 
 				parameters := make(map[string]string)
 				parameters["address"] = device.Address

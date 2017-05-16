@@ -2,7 +2,6 @@ package status
 
 import (
 	"log"
-	"strings"
 
 	"github.com/byuoitav/configuration-database-microservice/accessors"
 )
@@ -28,7 +27,7 @@ func (p *PowerDefault) GenerateCommands(devices []accessors.Device) ([]StatusCom
 
 		for _, command := range device.Commands {
 
-			if strings.HasPrefix(command.Name, FLAG) {
+			if command.Name == "STATUS_Power" {
 
 				//every power command needs an address parameter
 				parameters := make(map[string]string)

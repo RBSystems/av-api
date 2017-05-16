@@ -83,7 +83,7 @@ func runStatusCommands(commands []StatusCommand) (outputs []Status, err error) {
 
 	//map device names to commands
 	commandMap := make(map[string][]StatusCommand)
-
+	//FIXME commands get lost somewhere in here
 	log.Printf("Building device map")
 	for _, command := range commands {
 
@@ -92,6 +92,7 @@ func runStatusCommands(commands []StatusCommand) (outputs []Status, err error) {
 			commandMap[command.Device.Name] = []StatusCommand{command}
 			log.Printf("Device %s identified", command.Device.Name)
 		} else {
+			log.Printf("Adding command: %s to device %s", command.Action.Name, command.Device.Name)
 			commandMap[command.Device.Name] = append(commandMap[command.Device.Name], command)
 		}
 
@@ -201,12 +202,14 @@ func issueCommands(commands []StatusCommand, channel chan Status, control *sync.
 
 func evaluateResponses(responses []Status) (base.PublicRoom, error) {
 
-	log.Printf("Evaluating responses...")
+	log.Printf("Evaluating responses from %v devices", len(responses))
 
 	var AudioDevices []base.AudioDevice
 	var Displays []base.Display
 
 	for _, device := range responses {
+
+		log.Printf("Processing responses pertaining to device: %s", device.DestinationDevice.Name)
 
 		if device.DestinationDevice.AudioDevice {
 			audioDevice, err := processAudioDevice(device)
@@ -241,8 +244,12 @@ func processAudioDevice(device Status) (base.AudioDevice, error) {
 	}
 
 	volume, ok := device.Status["volume"]
-	volumeInt, ok := volume.(int)
+	if !ok {
+		log.Printf("Could not find volume")
+	}
+	volumeFloat, ok := volume.(float64)
 	if ok {
+		volumeInt := int(volumeFloat)
 		audioDevice.Volume = &volumeInt
 	}
 
@@ -259,6 +266,7 @@ func processAudioDevice(device Status) (base.AudioDevice, error) {
 	}
 
 	audioDevice.Name = device.DestinationDevice.Name
+
 	return audioDevice, nil
 }
 
