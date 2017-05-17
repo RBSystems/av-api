@@ -8,6 +8,7 @@ import (
 	"net/http"
 	"strings"
 	"sync"
+	"time"
 
 	"github.com/byuoitav/av-api/base"
 	"github.com/byuoitav/av-api/dbo"
@@ -159,8 +160,11 @@ func issueCommands(commands []StatusCommand, channel chan []StatusResponse, cont
 			}
 		}
 
+		//build client
+		client := http.Client{Timeout: 10 * time.Second}
+
 		log.Printf("Sending requqest to %s", url)
-		response, err := http.Get(url)
+		response, err := client.Get(url)
 		if err != nil {
 			errorMessage := err.Error()
 			output.ErrorMessage = &errorMessage
@@ -168,6 +172,14 @@ func issueCommands(commands []StatusCommand, channel chan []StatusResponse, cont
 			log.Printf("Error getting response from %s", command.Device.Name)
 			continue
 		}
+		if response.StatusCode == http.StatusRequestTimeout || response.StatusCode == http.StatusGatewayTimeout {
+			errorMessage := "Request to " + url + " timed out."
+			output.ErrorMessage = &errorMessage
+			outputs = append(outputs, output)
+			log.Printf("Error: %s", output.ErrorMessage)
+			continue
+		}
+
 		defer response.Body.Close()
 
 		body, err := ioutil.ReadAll(response.Body)
