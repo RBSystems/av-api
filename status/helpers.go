@@ -53,7 +53,9 @@ func generateStatusCommands(room accessors.Room, commandMap map[string]StatusEva
 
 		if strings.HasPrefix(possibleEvaluator.EvaluatorKey, FLAG) {
 
-			currentEvaluator := DEFAULT_MAP[possibleEvaluator.EvaluatorKey]
+			if currentEvaluator, ok := DEFAULT_MAP[possibleEvaluator.EvaluatorKey]; !ok {
+				//report that the evaluator isn't in the map and return
+			}
 
 			devices, err := currentEvaluator.GetDevices(room)
 			if err != nil {
