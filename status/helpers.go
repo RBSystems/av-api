@@ -397,11 +397,11 @@ func generateStandardStatusCommand(devices []structs.Device, evaluatorName strin
 				var destinationDevice DestinationDevice
 				for _, role := range device.Roles {
 
-					if role == "AudioOut" {
+					if role.Name == "AudioOut" {
 						destinationDevice.AudioDevice = true
 					}
 
-					if role == "VideoOut" {
+					if role.Name == "VideoOut" {
 						destinationDevice.Display = true
 					}
 

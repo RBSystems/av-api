@@ -136,7 +136,6 @@ func ExecuteActions(actions []base.ActionStructure) ([]CommandExecutionReporting
 		}
 
 		resp, err := client.Do(req)
-		defer resp.Body.Close()
 
 		//if error, record it
 		if err != nil {
@@ -160,7 +159,9 @@ func ExecuteActions(actions []base.ActionStructure) ([]CommandExecutionReporting
 			})
 
 			continue
-		} else if resp.StatusCode != 200 { //check the response code, if non-200, we need to record and report
+		}
+		defer resp.Body.Close()
+		if resp.StatusCode != 200 { //check the response code, if non-200, we need to record and report
 
 			//check the response code
 			log.Printf("Probalem with the request, response code; %v", resp.StatusCode)

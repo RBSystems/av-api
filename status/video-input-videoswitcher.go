@@ -32,7 +32,7 @@ func (p *InputVideoSwitcher) GenerateCommands(devices []structs.Device) ([]Statu
 
 	for _, device := range devices {
 		for _, role := range device.Roles {
-			if role == "VideoSwitcher" {
+			if role.Name == "VideoSwitcher" {
 				log.Printf("Found.")
 				found = true
 				break
@@ -68,12 +68,12 @@ func (p *InputVideoSwitcher) GenerateCommands(devices []structs.Device) ([]Statu
 		var destinationDevice DestinationDevice
 		//for now assume that everything is going through the switcher, check to make sure it's a device we care about
 		for _, role := range device.Roles {
-			if role == "AudioOut" {
+			if role.Name == "AudioOut" {
 				cont = true
 				destinationDevice.AudioDevice = true
 			}
 
-			if role == "VideoOut" {
+			if role.Name == "VideoOut" {
 				cont = true
 				destinationDevice.Display = true
 			}

@@ -40,7 +40,7 @@ func (s *StandbyDefault) Evaluate(room base.PublicRoom) (actions []base.ActionSt
 		for _, device := range devices {
 			containsStandby := false
 			for _, ps := range device.PowerStates {
-				if strings.EqualFold(ps, "Standby") {
+				if strings.EqualFold(ps.Name, "Standby") {
 					containsStandby = true
 					break
 				}
