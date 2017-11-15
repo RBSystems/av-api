@@ -115,7 +115,7 @@ func CheckReachability(deviceA, deviceB string, ig InputGraph) (bool, []Node, er
 				count := 0
 				for ok {
 					if count > len(path) {
-						msg := "Circular path detected: returnin"
+						msg := "Circular path detected: returning"
 						log.Printf(color.HiRedString(msg))
 
 						return false, []Node{}, errors.New(msg)
