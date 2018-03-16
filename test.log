@@ -1,0 +1,659 @@
+2017/07/07 00:30:35 Initializing.
+2017/07/07 00:30:35 Getting room information.
+2017/07/07 00:30:35 Room ITB-1101
+2017/07/07 00:30:35 Getting room 1101 in building ITB...
+2017/07/07 00:30:35 Getting data from URL: http://localhost:8006/buildings/ITB/rooms/1101...
+2017/07/07 00:30:35 Done.
+Yay! I work.
+ ⇛ http server started on :8000
+2017/07/07 00:30:35 Starting distribution Channel
+2017/07/07 00:30:35 [HealthCheck] will report success in 10 seconds, waiting for listening services to be up
+2017/07/07 00:30:35 Router is subscribed to me
+2017/07/07 00:30:35 Subscription receieved for 127.0.0.1:50410
+2017/07/07 00:30:40 Local check starting
+2017/07/07 00:30:40 Authorized via LOCAL_ENVIRONMENT
+2017/07/07 00:30:40 Putting room changes.
+2017/07/07 00:30:40 Beginning edit of room state
+2017/07/07 00:30:40 Getting room 1106B in building ITB...
+2017/07/07 00:30:40 Getting data from URL: http://localhost:8006/buildings/ITB/rooms/1106B...
+2017/07/07 00:30:41 Done.
+2017/07/07 00:30:41 Starting evaluation with evaluator PowerOnDefault
+2017/07/07 00:30:41 Evaluating for PowerOn command.
+2017/07/07 00:30:41 Evaluating displays for power on command.
+2017/07/07 00:30:41 Evaluating audio devices for command power on. 
+2017/07/07 00:30:41 0 actions generated.
+2017/07/07 00:30:41 Evaluation complete.
+2017/07/07 00:30:41 Starting evaluation with evaluator StandbyDefault
+2017/07/07 00:30:41 Evaluating for Standby Command.
+2017/07/07 00:30:41 Evaluating audio devices for command power on. 
+2017/07/07 00:30:41 0 actions generated.
+2017/07/07 00:30:41 Evaluation complete.
+2017/07/07 00:30:41 Starting evaluation with evaluator MuteDSP
+2017/07/07 00:30:41 Evaluating PUT body for "Mute" command in DSP context...
+2017/07/07 00:30:41 %!s(int=0) actions generated.
+2017/07/07 00:30:41 Evaluation complete.
+2017/07/07 00:30:41 Starting evaluation with evaluator UnmuteDSP
+2017/07/07 00:30:41 Evaluating PUT body for UNMUTE command in DSP context...
+2017/07/07 00:30:41 %!s(int=0) actions generated.
+2017/07/07 00:30:41 Evaluation complete.
+2017/07/07 00:30:41 Starting evaluation with evaluator UnBlankDisplayDefault
+2017/07/07 00:30:41 Evaluating individial displays for unblanking.
+2017/07/07 00:30:41 Evaluation complete; 0 actions generated.
+2017/07/07 00:30:41 Starting evaluation with evaluator BlankDisplayDefault
+2017/07/07 00:30:41 Evaluating for BlankDisplay command.
+2017/07/07 00:30:41 Evaluating individual displays for blanking.
+2017/07/07 00:30:41 0 actions generated.
+2017/07/07 00:30:41 Evaluation complete.
+2017/07/07 00:30:41 Starting evaluation with evaluator SetVolumeDSP
+2017/07/07 00:30:41 Evaluating SetVolume command in DSP context...
+2017/07/07 00:30:41 0 actions generated.
+2017/07/07 00:30:41 Evaluation complete.
+2017/07/07 00:30:41 Starting evaluation with evaluator ChangeVideoInputVideoSwitcher
+2017/07/07 00:30:41 Getting data from URL: http://localhost:8006/buildings/ITB/rooms/1106B/devices/DSP1...
+2017/07/07 00:30:41 Done.
+2017/07/07 00:30:41 Getting data from URL: http://localhost:8006/buildings/ITB/rooms/1106B/devices/roles/VideoSwitcher...
+2017/07/07 00:30:41 Done.
+2017/07/07 00:30:41 Evaluating device ITB-1106B-SW1 for a port connecting Via2 to ITB-1106B-DSP1
+2017/07/07 00:30:41 Validating action for command ChangeInput
+2017/07/07 00:30:41 done.
+2017/07/07 00:30:41 Done with Evaluation.
+2017/07/07 00:30:41 Starting reconcilliation
+2017/07/07 00:30:41 Startin reconciliation
+2017/07/07 00:30:41 Reconciling actions.
+2017/07/07 00:30:41 Generating device action set.
+2017/07/07 00:30:41 Checking for incompatible actions.
+2017/07/07 00:30:41 Done.
+2017/07/07 00:30:41 Publishing event: {"hostname":"linux-knight","timestamp":"2017-07-07T00:30:41-06:00","localEnvironment":true,"event":{"type":2,"eventCause":0,"device":"ITB-1106B-DSP1","eventInfoKey":"input","eventInfoValue":"Via2"},"building":"ITB","room":"1106B"}
+2017/07/07 00:30:41 Successfully sent command ChangeInput to device SW1.
+2017/07/07 00:30:41 Done.
+2017/07/07 00:30:45 [HealthCheck] Reporting microsrevice startup complete
+2017/07/07 00:30:45 [HealthCheck] Checking Health...
+2017/07/07 00:30:45 [HealthCheck] Checking microservice health: 
+2017/07/07 00:30:45 getting all buildings...
+2017/07/07 00:30:45 http://localhost:8006/buildings
+2017/07/07 00:30:45 Getting data from URL: http://localhost:8006/buildings...
+2017/07/07 00:30:45 Done.
+2017/07/07 00:30:45 [HealthCheck] Done. Report:
+2017/07/07 00:30:45 Initialized: ok
+2017/07/07 00:30:45 Web Server Status: ok
+2017/07/07 00:30:45 Version: 0.9.1
+2017/07/07 00:30:45 Configuration Database Microservice Connectivity: ok
+2017/07/07 00:30:45 [HealthCheck] End.
+2017/07/07 00:30:45 [HealthCheck] Reporting...
+2017/07/07 00:30:45 Publishing event: {"hostname":"linux-knight","timestamp":"2017-07-07T00:30:45-06:00","localEnvironment":true,"event":{"type":6,"eventCause":4,"device":"AV-API","eventInfoKey":"Initialized","eventInfoValue":"ok"},"building":"ITB","room":"1101"}
+2017/07/07 00:30:45 Publishing event: {"hostname":"linux-knight","timestamp":"2017-07-07T00:30:45-06:00","localEnvironment":true,"event":{"type":6,"eventCause":4,"device":"AV-API","eventInfoKey":"Web Server Status","eventInfoValue":"ok"},"building":"ITB","room":"1101"}
+2017/07/07 00:30:45 Publishing event: {"hostname":"linux-knight","timestamp":"2017-07-07T00:30:45-06:00","localEnvironment":true,"event":{"type":6,"eventCause":4,"device":"AV-API","eventInfoKey":"Version","eventInfoValue":"0.9.1"},"building":"ITB","room":"1101"}
+2017/07/07 00:30:45 Publishing event: {"hostname":"linux-knight","timestamp":"2017-07-07T00:30:45-06:00","localEnvironment":true,"event":{"type":6,"eventCause":4,"device":"AV-API","eventInfoKey":"Configuration Database Microservice Connectivity","eventInfoValue":"ok"},"building":"ITB","room":"1101"}
+2017/07/07 00:30:45 Publishing event: {"hostname":"linux-knight","timestamp":"2017-07-07T00:30:45-06:00","localEnvironment":true,"event":{"type":6,"eventCause":4,"device":"AV-API","eventInfoKey":"ready","eventInfoValue":"false"},"building":"ITB","room":"1101"}
+2017/07/07 00:30:50 Local check starting
+2017/07/07 00:30:50 Authorized via LOCAL_ENVIRONMENT
+2017/07/07 00:30:50 Getting room 1106B in building ITB...
+2017/07/07 00:30:50 Getting data from URL: http://localhost:8006/buildings/ITB/rooms/1106B...
+2017/07/07 00:30:50 Done.
+2017/07/07 00:30:50 Generating commands...
+2017/07/07 00:30:50 Generating status commands from STATUS_BlankedDefault
+2017/07/07 00:30:50 Considering device: MIC1
+2017/07/07 00:30:50 Considering device: MIC2
+2017/07/07 00:30:50 Considering device: DSP1
+2017/07/07 00:30:50 Considering device: D1
+2017/07/07 00:30:50 Command found
+2017/07/07 00:30:50 Adding command: STATUS_Blanked to action list with device D1
+2017/07/07 00:30:50 Considering device: D2
+2017/07/07 00:30:50 Command found
+2017/07/07 00:30:50 Adding command: STATUS_Blanked to action list with device D2
+2017/07/07 00:30:50 Considering device: HDMISouth
+2017/07/07 00:30:50 Considering device: HDMIWest
+2017/07/07 00:30:50 Considering device: Via1
+2017/07/07 00:30:50 Considering device: Via2
+2017/07/07 00:30:50 Considering device: CP1
+2017/07/07 00:30:50 Considering device: CP2
+2017/07/07 00:30:50 Considering device: SW1
+2017/07/07 00:30:50 Generating status commands from STATUS_PowerDefault
+2017/07/07 00:30:50 Considering device: MIC1
+2017/07/07 00:30:50 Considering device: MIC2
+2017/07/07 00:30:50 Considering device: DSP1
+2017/07/07 00:30:50 Considering device: D1
+2017/07/07 00:30:50 Command found
+2017/07/07 00:30:50 Adding command: STATUS_Power to action list with device D1
+2017/07/07 00:30:50 Considering device: D2
+2017/07/07 00:30:50 Command found
+2017/07/07 00:30:50 Adding command: STATUS_Power to action list with device D2
+2017/07/07 00:30:50 Considering device: HDMISouth
+2017/07/07 00:30:50 Considering device: HDMIWest
+2017/07/07 00:30:50 Considering device: Via1
+2017/07/07 00:30:50 Considering device: Via2
+2017/07/07 00:30:50 Considering device: CP1
+2017/07/07 00:30:50 Considering device: CP2
+2017/07/07 00:30:50 Considering device: SW1
+2017/07/07 00:30:50 Generating "Muted" status commands...
+2017/07/07 00:30:50 Considering device: MIC1
+2017/07/07 00:30:50 Considering device: MIC2
+2017/07/07 00:30:50 Considering device: DSP1
+2017/07/07 00:30:50 Considering device: D1
+2017/07/07 00:30:50 Considering device: D2
+2017/07/07 00:30:50 Considering device: HDMISouth
+2017/07/07 00:30:50 Considering device: HDMIWest
+2017/07/07 00:30:50 Considering device: Via1
+2017/07/07 00:30:50 Considering device: Via2
+2017/07/07 00:30:50 Considering device: CP1
+2017/07/07 00:30:50 Considering device: CP2
+2017/07/07 00:30:50 Considering device: SW1
+2017/07/07 00:30:50 Generating status commands from STATUS_MutedDSP
+2017/07/07 00:30:50 Generating STATUS_MutedDSP commands agains mics...
+2017/07/07 00:30:50 Getting data from URL: http://localhost:8006/buildings/ITB/rooms/1106B/devices/roles/DSP...
+2017/07/07 00:30:50 Done.
+2017/07/07 00:30:50 Considering mic MIC1...
+2017/07/07 00:30:50 Port configuration identified for mic MIC1 and DSP DSP1
+2017/07/07 00:30:50 Considering mic MIC2...
+2017/07/07 00:30:50 Port configuration identified for mic MIC2 and DSP DSP1
+2017/07/07 00:30:50 Generating DSP status command: STATUS_MutedDSP against device: {%!s(int=81) DSP1 BLU 50 10.5.34.6 %!s(bool=false) %!s(bool=false) {%!s(int=1) Information Technology Building ITB BYU Office of Information Technology} {%!s(int=30) 1106B AV Conference Room With Multiple Displays {%!s(int=0)   } [] %!s(int=0) {%!s(int=0)     []} } blu-dsp  [DSP AudioOut] %!s(*bool=<nil>) %!s(*int=<nil>) %!s(*bool=<nil>) [] %!s(bool=false) [{MIC1 00010a DSP1 DSP1} {MIC2 00010b DSP1 DSP1} {SW1 00010e DSP1 DSP1} {SW1 00010f DSP1 DSP1}] [{SetVolume {%!s(int=0) SetVolumeDSP /:address/:input/volume/set/:level } http://localhost:8009 %!s(int=0)} {Mute {%!s(int=0) MuteDSP /:address/:input/volume/mute } http://localhost:8009 %!s(int=0)} {UnMute {%!s(int=0) UnMuteDSP /:address/:input/volume/unmute } http://localhost:8009 %!s(int=0)} {STATUS_VolumeDSP {%!s(int=0) StatusVolumeDSP /:address/:input/volume/level } http://localhost:8009 %!s(int=0)} {STATUS_MutedDSP {%!s(int=0) StatusMuteDSP /:address/:input/mute/status } http://localhost:8009 %!s(int=0)}]}
+2017/07/07 00:30:50 Getting data from URL: http://localhost:8006/buildings/ITB/rooms/1106B/devices/MIC1...
+2017/07/07 00:30:50 Done.
+2017/07/07 00:30:50 Getting data from URL: http://localhost:8006/buildings/ITB/rooms/1106B/devices/MIC2...
+2017/07/07 00:30:50 Done.
+2017/07/07 00:30:50 Getting data from URL: http://localhost:8006/buildings/ITB/rooms/1106B/devices/SW1...
+2017/07/07 00:30:50 Done.
+2017/07/07 00:30:50 Getting data from URL: http://localhost:8006/buildings/ITB/rooms/1106B/devices/SW1...
+2017/07/07 00:30:50 Done.
+2017/07/07 00:30:50 action: { {0   }  0}
+2017/07/07 00:30:50 Device: {81 DSP1 BLU 50 10.5.34.6 false false {1 Information Technology Building ITB BYU Office of Information Technology} {30 1106B AV Conference Room With Multiple Displays {0   } [] 0 {0     []} } blu-dsp  [DSP AudioOut] <nil> <nil> <nil> [] false [{MIC1 00010a DSP1 DSP1} {MIC2 00010b DSP1 DSP1} {SW1 00010e DSP1 DSP1} {SW1 00010f DSP1 DSP1}] [{SetVolume {0 SetVolumeDSP /:address/:input/volume/set/:level } http://localhost:8009 0} {Mute {0 MuteDSP /:address/:input/volume/mute } http://localhost:8009 0} {UnMute {0 UnMuteDSP /:address/:input/volume/unmute } http://localhost:8009 0} {STATUS_VolumeDSP {0 StatusVolumeDSP /:address/:input/volume/level } http://localhost:8009 0} {STATUS_MutedDSP {0 StatusMuteDSP /:address/:input/mute/status } http://localhost:8009 0}]}
+2017/07/07 00:30:50 Destination device: {{82 MIC1  0.0.0.0 false true {1 Information Technology Building ITB BYU Office of Information Technology} {30 1106B AV Conference Room With Multiple Displays {0   } [] 0 {0     []} } microphone  [AudioOut Microphone] <nil> <nil> <nil> [] false [] []} true false}
+2017/07/07 00:30:50 Parameters: map[input:00010a address:10.5.34.6]
+2017/07/07 00:30:50 action: { {0   }  0}
+2017/07/07 00:30:50 Device: {81 DSP1 BLU 50 10.5.34.6 false false {1 Information Technology Building ITB BYU Office of Information Technology} {30 1106B AV Conference Room With Multiple Displays {0   } [] 0 {0     []} } blu-dsp  [DSP AudioOut] <nil> <nil> <nil> [] false [{MIC1 00010a DSP1 DSP1} {MIC2 00010b DSP1 DSP1} {SW1 00010e DSP1 DSP1} {SW1 00010f DSP1 DSP1}] [{SetVolume {0 SetVolumeDSP /:address/:input/volume/set/:level } http://localhost:8009 0} {Mute {0 MuteDSP /:address/:input/volume/mute } http://localhost:8009 0} {UnMute {0 UnMuteDSP /:address/:input/volume/unmute } http://localhost:8009 0} {STATUS_VolumeDSP {0 StatusVolumeDSP /:address/:input/volume/level } http://localhost:8009 0} {STATUS_MutedDSP {0 StatusMuteDSP /:address/:input/mute/status } http://localhost:8009 0}]}
+2017/07/07 00:30:50 Destination device: {{83 MIC2  0.0.0.0 false true {1 Information Technology Building ITB BYU Office of Information Technology} {30 1106B AV Conference Room With Multiple Displays {0   } [] 0 {0     []} } microphone  [Microphone AudioOut] <nil> <nil> <nil> [] false [] []} true false}
+2017/07/07 00:30:50 Parameters: map[input:00010b address:10.5.34.6]
+2017/07/07 00:30:50 action: {STATUS_MutedDSP {0 StatusMuteDSP /:address/:input/mute/status } http://localhost:8009 0}
+2017/07/07 00:30:50 Device: {81 DSP1 BLU 50 10.5.34.6 false false {1 Information Technology Building ITB BYU Office of Information Technology} {30 1106B AV Conference Room With Multiple Displays {0   } [] 0 {0     []} } blu-dsp  [DSP AudioOut] <nil> <nil> <nil> [] false [{MIC1 00010a DSP1 DSP1} {MIC2 00010b DSP1 DSP1} {SW1 00010e DSP1 DSP1} {SW1 00010f DSP1 DSP1}] [{SetVolume {0 SetVolumeDSP /:address/:input/volume/set/:level } http://localhost:8009 0} {Mute {0 MuteDSP /:address/:input/volume/mute } http://localhost:8009 0} {UnMute {0 UnMuteDSP /:address/:input/volume/unmute } http://localhost:8009 0} {STATUS_VolumeDSP {0 StatusVolumeDSP /:address/:input/volume/level } http://localhost:8009 0} {STATUS_MutedDSP {0 StatusMuteDSP /:address/:input/mute/status } http://localhost:8009 0}]}
+2017/07/07 00:30:50 Destination device: {{81 DSP1 BLU 50 10.5.34.6 false false {1 Information Technology Building ITB BYU Office of Information Technology} {30 1106B AV Conference Room With Multiple Displays {0   } [] 0 {0     []} } blu-dsp  [DSP AudioOut] <nil> <nil> <nil> [] false [{MIC1 00010a DSP1 DSP1} {MIC2 00010b DSP1 DSP1} {SW1 00010e DSP1 DSP1} {SW1 00010f DSP1 DSP1}] [{SetVolume {0 SetVolumeDSP /:address/:input/volume/set/:level } http://localhost:8009 0} {Mute {0 MuteDSP /:address/:input/volume/mute } http://localhost:8009 0} {UnMute {0 UnMuteDSP /:address/:input/volume/unmute } http://localhost:8009 0} {STATUS_VolumeDSP {0 StatusVolumeDSP /:address/:input/volume/level } http://localhost:8009 0} {STATUS_MutedDSP {0 StatusMuteDSP /:address/:input/mute/status } http://localhost:8009 0}]} true false}
+2017/07/07 00:30:50 Parameters: map[address:10.5.34.6 input:00010f]
+2017/07/07 00:30:50 action: {STATUS_MutedDSP {0 StatusMuteDSP /:address/:input/mute/status } http://localhost:8009 0}
+2017/07/07 00:30:50 Device: {81 DSP1 BLU 50 10.5.34.6 false false {1 Information Technology Building ITB BYU Office of Information Technology} {30 1106B AV Conference Room With Multiple Displays {0   } [] 0 {0     []} } blu-dsp  [DSP AudioOut] <nil> <nil> <nil> [] false [{MIC1 00010a DSP1 DSP1} {MIC2 00010b DSP1 DSP1} {SW1 00010e DSP1 DSP1} {SW1 00010f DSP1 DSP1}] [{SetVolume {0 SetVolumeDSP /:address/:input/volume/set/:level } http://localhost:8009 0} {Mute {0 MuteDSP /:address/:input/volume/mute } http://localhost:8009 0} {UnMute {0 UnMuteDSP /:address/:input/volume/unmute } http://localhost:8009 0} {STATUS_VolumeDSP {0 StatusVolumeDSP /:address/:input/volume/level } http://localhost:8009 0} {STATUS_MutedDSP {0 StatusMuteDSP /:address/:input/mute/status } http://localhost:8009 0}]}
+2017/07/07 00:30:50 Destination device: {{81 DSP1 BLU 50 10.5.34.6 false false {1 Information Technology Building ITB BYU Office of Information Technology} {30 1106B AV Conference Room With Multiple Displays {0   } [] 0 {0     []} } blu-dsp  [DSP AudioOut] <nil> <nil> <nil> [] false [{MIC1 00010a DSP1 DSP1} {MIC2 00010b DSP1 DSP1} {SW1 00010e DSP1 DSP1} {SW1 00010f DSP1 DSP1}] [{SetVolume {0 SetVolumeDSP /:address/:input/volume/set/:level } http://localhost:8009 0} {Mute {0 MuteDSP /:address/:input/volume/mute } http://localhost:8009 0} {UnMute {0 UnMuteDSP /:address/:input/volume/unmute } http://localhost:8009 0} {STATUS_VolumeDSP {0 StatusVolumeDSP /:address/:input/volume/level } http://localhost:8009 0} {STATUS_MutedDSP {0 StatusMuteDSP /:address/:input/mute/status } http://localhost:8009 0}]} true false}
+2017/07/07 00:30:50 Parameters: map[input:00010f address:10.5.34.6]
+2017/07/07 00:30:50 Generating status commands from STATUS_Video_Switcher
+2017/07/07 00:30:50 Looking for video switcher in room
+2017/07/07 00:30:50 Found.
+2017/07/07 00:30:50 Video switcher found
+2017/07/07 00:30:50 Considering device: ITB-1106B-MIC1
+2017/07/07 00:30:50 Device is an output device.
+2017/07/07 00:30:50 Looking for an output port that matches the goal device.
+2017/07/07 00:30:50 Could find no output port matching the device on the switcher, skipping.
+2017/07/07 00:30:50 Considering device: ITB-1106B-MIC2
+2017/07/07 00:30:50 Device is an output device.
+2017/07/07 00:30:50 Looking for an output port that matches the goal device.
+2017/07/07 00:30:50 Could find no output port matching the device on the switcher, skipping.
+2017/07/07 00:30:50 Considering device: ITB-1106B-DSP1
+2017/07/07 00:30:50 Device is an output device.
+2017/07/07 00:30:50 Looking for an output port that matches the goal device.
+2017/07/07 00:30:50 Found an output port on switcher ITB-1106B-SW1 for device ITB-1106B-DSP1. Port: 0
+2017/07/07 00:30:50 Generating status command.
+2017/07/07 00:30:50 Considering device: ITB-1106B-D1
+2017/07/07 00:30:50 Device is an output device.
+2017/07/07 00:30:50 Looking for an output port that matches the goal device.
+2017/07/07 00:30:50 Found an output port on switcher ITB-1106B-SW1 for device ITB-1106B-D1. Port: 1
+2017/07/07 00:30:50 Generating status command.
+2017/07/07 00:30:50 Considering device: ITB-1106B-D2
+2017/07/07 00:30:50 Device is an output device.
+2017/07/07 00:30:50 Looking for an output port that matches the goal device.
+2017/07/07 00:30:50 Found an output port on switcher ITB-1106B-SW1 for device ITB-1106B-D2. Port: 2
+2017/07/07 00:30:50 Generating status command.
+2017/07/07 00:30:50 Considering device: ITB-1106B-HDMISouth
+2017/07/07 00:30:50 Device is not an output device.
+2017/07/07 00:30:50 Considering device: ITB-1106B-HDMIWest
+2017/07/07 00:30:50 Device is not an output device.
+2017/07/07 00:30:50 Considering device: ITB-1106B-Via1
+2017/07/07 00:30:50 Device is not an output device.
+2017/07/07 00:30:50 Considering device: ITB-1106B-Via2
+2017/07/07 00:30:50 Device is not an output device.
+2017/07/07 00:30:50 Considering device: ITB-1106B-CP1
+2017/07/07 00:30:50 Device is not an output device.
+2017/07/07 00:30:50 Considering device: ITB-1106B-CP2
+2017/07/07 00:30:50 Device is not an output device.
+2017/07/07 00:30:50 Considering device: ITB-1106B-SW1
+2017/07/07 00:30:50 Device is not an output device.
+2017/07/07 00:30:50 Done.
+2017/07/07 00:30:50 Generating "Muted" status commands...
+2017/07/07 00:30:50 Considering device: MIC1
+2017/07/07 00:30:50 Considering device: MIC2
+2017/07/07 00:30:50 Considering device: DSP1
+2017/07/07 00:30:50 Considering device: D1
+2017/07/07 00:30:50 Considering device: D2
+2017/07/07 00:30:50 Considering device: HDMISouth
+2017/07/07 00:30:50 Considering device: HDMIWest
+2017/07/07 00:30:50 Considering device: Via1
+2017/07/07 00:30:50 Considering device: Via2
+2017/07/07 00:30:50 Considering device: CP1
+2017/07/07 00:30:50 Considering device: CP2
+2017/07/07 00:30:50 Considering device: SW1
+2017/07/07 00:30:50 Generating status commands from STATUS_MutedDSP
+2017/07/07 00:30:50 Generating STATUS_MutedDSP commands agains mics...
+2017/07/07 00:30:50 Getting data from URL: http://localhost:8006/buildings/ITB/rooms/1106B/devices/roles/DSP...
+2017/07/07 00:30:50 Done.
+2017/07/07 00:30:50 Considering mic MIC1...
+2017/07/07 00:30:50 Port configuration identified for mic MIC1 and DSP DSP1
+2017/07/07 00:30:50 Considering mic MIC2...
+2017/07/07 00:30:50 Port configuration identified for mic MIC2 and DSP DSP1
+2017/07/07 00:30:50 Generating DSP status command: STATUS_MutedDSP against device: {%!s(int=81) DSP1 BLU 50 10.5.34.6 %!s(bool=false) %!s(bool=false) {%!s(int=1) Information Technology Building ITB BYU Office of Information Technology} {%!s(int=30) 1106B AV Conference Room With Multiple Displays {%!s(int=0)   } [] %!s(int=0) {%!s(int=0)     []} } blu-dsp  [DSP AudioOut] %!s(*bool=<nil>) %!s(*int=<nil>) %!s(*bool=<nil>) [] %!s(bool=false) [{MIC1 00010a DSP1 DSP1} {MIC2 00010b DSP1 DSP1} {SW1 00010e DSP1 DSP1} {SW1 00010f DSP1 DSP1}] [{SetVolume {%!s(int=0) SetVolumeDSP /:address/:input/volume/set/:level } http://localhost:8009 %!s(int=0)} {Mute {%!s(int=0) MuteDSP /:address/:input/volume/mute } http://localhost:8009 %!s(int=0)} {UnMute {%!s(int=0) UnMuteDSP /:address/:input/volume/unmute } http://localhost:8009 %!s(int=0)} {STATUS_VolumeDSP {%!s(int=0) StatusVolumeDSP /:address/:input/volume/level } http://localhost:8009 %!s(int=0)} {STATUS_MutedDSP {%!s(int=0) StatusMuteDSP /:address/:input/mute/status } http://localhost:8009 %!s(int=0)}]}
+2017/07/07 00:30:50 Getting data from URL: http://localhost:8006/buildings/ITB/rooms/1106B/devices/MIC1...
+2017/07/07 00:30:50 Done.
+2017/07/07 00:30:50 Getting data from URL: http://localhost:8006/buildings/ITB/rooms/1106B/devices/MIC2...
+2017/07/07 00:30:50 Done.
+2017/07/07 00:30:50 Getting data from URL: http://localhost:8006/buildings/ITB/rooms/1106B/devices/SW1...
+2017/07/07 00:30:50 Done.
+2017/07/07 00:30:50 Getting data from URL: http://localhost:8006/buildings/ITB/rooms/1106B/devices/SW1...
+2017/07/07 00:30:50 Done.
+2017/07/07 00:30:50 action: { {0   }  0}
+2017/07/07 00:30:50 Device: {81 DSP1 BLU 50 10.5.34.6 false false {1 Information Technology Building ITB BYU Office of Information Technology} {30 1106B AV Conference Room With Multiple Displays {0   } [] 0 {0     []} } blu-dsp  [DSP AudioOut] <nil> <nil> <nil> [] false [{MIC1 00010a DSP1 DSP1} {MIC2 00010b DSP1 DSP1} {SW1 00010e DSP1 DSP1} {SW1 00010f DSP1 DSP1}] [{SetVolume {0 SetVolumeDSP /:address/:input/volume/set/:level } http://localhost:8009 0} {Mute {0 MuteDSP /:address/:input/volume/mute } http://localhost:8009 0} {UnMute {0 UnMuteDSP /:address/:input/volume/unmute } http://localhost:8009 0} {STATUS_VolumeDSP {0 StatusVolumeDSP /:address/:input/volume/level } http://localhost:8009 0} {STATUS_MutedDSP {0 StatusMuteDSP /:address/:input/mute/status } http://localhost:8009 0}]}
+2017/07/07 00:30:50 Destination device: {{82 MIC1  0.0.0.0 false true {1 Information Technology Building ITB BYU Office of Information Technology} {30 1106B AV Conference Room With Multiple Displays {0   } [] 0 {0     []} } microphone  [AudioOut Microphone] <nil> <nil> <nil> [] false [] []} true false}
+2017/07/07 00:30:50 Parameters: map[input:00010a address:10.5.34.6]
+2017/07/07 00:30:50 action: { {0   }  0}
+2017/07/07 00:30:50 Device: {81 DSP1 BLU 50 10.5.34.6 false false {1 Information Technology Building ITB BYU Office of Information Technology} {30 1106B AV Conference Room With Multiple Displays {0   } [] 0 {0     []} } blu-dsp  [DSP AudioOut] <nil> <nil> <nil> [] false [{MIC1 00010a DSP1 DSP1} {MIC2 00010b DSP1 DSP1} {SW1 00010e DSP1 DSP1} {SW1 00010f DSP1 DSP1}] [{SetVolume {0 SetVolumeDSP /:address/:input/volume/set/:level } http://localhost:8009 0} {Mute {0 MuteDSP /:address/:input/volume/mute } http://localhost:8009 0} {UnMute {0 UnMuteDSP /:address/:input/volume/unmute } http://localhost:8009 0} {STATUS_VolumeDSP {0 StatusVolumeDSP /:address/:input/volume/level } http://localhost:8009 0} {STATUS_MutedDSP {0 StatusMuteDSP /:address/:input/mute/status } http://localhost:8009 0}]}
+2017/07/07 00:30:50 Destination device: {{83 MIC2  0.0.0.0 false true {1 Information Technology Building ITB BYU Office of Information Technology} {30 1106B AV Conference Room With Multiple Displays {0   } [] 0 {0     []} } microphone  [Microphone AudioOut] <nil> <nil> <nil> [] false [] []} true false}
+2017/07/07 00:30:50 Parameters: map[input:00010b address:10.5.34.6]
+2017/07/07 00:30:50 action: {STATUS_MutedDSP {0 StatusMuteDSP /:address/:input/mute/status } http://localhost:8009 0}
+2017/07/07 00:30:50 Device: {81 DSP1 BLU 50 10.5.34.6 false false {1 Information Technology Building ITB BYU Office of Information Technology} {30 1106B AV Conference Room With Multiple Displays {0   } [] 0 {0     []} } blu-dsp  [DSP AudioOut] <nil> <nil> <nil> [] false [{MIC1 00010a DSP1 DSP1} {MIC2 00010b DSP1 DSP1} {SW1 00010e DSP1 DSP1} {SW1 00010f DSP1 DSP1}] [{SetVolume {0 SetVolumeDSP /:address/:input/volume/set/:level } http://localhost:8009 0} {Mute {0 MuteDSP /:address/:input/volume/mute } http://localhost:8009 0} {UnMute {0 UnMuteDSP /:address/:input/volume/unmute } http://localhost:8009 0} {STATUS_VolumeDSP {0 StatusVolumeDSP /:address/:input/volume/level } http://localhost:8009 0} {STATUS_MutedDSP {0 StatusMuteDSP /:address/:input/mute/status } http://localhost:8009 0}]}
+2017/07/07 00:30:50 Destination device: {{81 DSP1 BLU 50 10.5.34.6 false false {1 Information Technology Building ITB BYU Office of Information Technology} {30 1106B AV Conference Room With Multiple Displays {0   } [] 0 {0     []} } blu-dsp  [DSP AudioOut] <nil> <nil> <nil> [] false [{MIC1 00010a DSP1 DSP1} {MIC2 00010b DSP1 DSP1} {SW1 00010e DSP1 DSP1} {SW1 00010f DSP1 DSP1}] [{SetVolume {0 SetVolumeDSP /:address/:input/volume/set/:level } http://localhost:8009 0} {Mute {0 MuteDSP /:address/:input/volume/mute } http://localhost:8009 0} {UnMute {0 UnMuteDSP /:address/:input/volume/unmute } http://localhost:8009 0} {STATUS_VolumeDSP {0 StatusVolumeDSP /:address/:input/volume/level } http://localhost:8009 0} {STATUS_MutedDSP {0 StatusMuteDSP /:address/:input/mute/status } http://localhost:8009 0}]} true false}
+2017/07/07 00:30:50 Parameters: map[address:10.5.34.6 input:00010f]
+2017/07/07 00:30:50 action: {STATUS_MutedDSP {0 StatusMuteDSP /:address/:input/mute/status } http://localhost:8009 0}
+2017/07/07 00:30:50 Device: {81 DSP1 BLU 50 10.5.34.6 false false {1 Information Technology Building ITB BYU Office of Information Technology} {30 1106B AV Conference Room With Multiple Displays {0   } [] 0 {0     []} } blu-dsp  [DSP AudioOut] <nil> <nil> <nil> [] false [{MIC1 00010a DSP1 DSP1} {MIC2 00010b DSP1 DSP1} {SW1 00010e DSP1 DSP1} {SW1 00010f DSP1 DSP1}] [{SetVolume {0 SetVolumeDSP /:address/:input/volume/set/:level } http://localhost:8009 0} {Mute {0 MuteDSP /:address/:input/volume/mute } http://localhost:8009 0} {UnMute {0 UnMuteDSP /:address/:input/volume/unmute } http://localhost:8009 0} {STATUS_VolumeDSP {0 StatusVolumeDSP /:address/:input/volume/level } http://localhost:8009 0} {STATUS_MutedDSP {0 StatusMuteDSP /:address/:input/mute/status } http://localhost:8009 0}]}
+2017/07/07 00:30:50 Destination device: {{81 DSP1 BLU 50 10.5.34.6 false false {1 Information Technology Building ITB BYU Office of Information Technology} {30 1106B AV Conference Room With Multiple Displays {0   } [] 0 {0     []} } blu-dsp  [DSP AudioOut] <nil> <nil> <nil> [] false [{MIC1 00010a DSP1 DSP1} {MIC2 00010b DSP1 DSP1} {SW1 00010e DSP1 DSP1} {SW1 00010f DSP1 DSP1}] [{SetVolume {0 SetVolumeDSP /:address/:input/volume/set/:level } http://localhost:8009 0} {Mute {0 MuteDSP /:address/:input/volume/mute } http://localhost:8009 0} {UnMute {0 UnMuteDSP /:address/:input/volume/unmute } http://localhost:8009 0} {STATUS_VolumeDSP {0 StatusVolumeDSP /:address/:input/volume/level } http://localhost:8009 0} {STATUS_MutedDSP {0 StatusMuteDSP /:address/:input/mute/status } http://localhost:8009 0}]} true false}
+2017/07/07 00:30:50 Parameters: map[address:10.5.34.6 input:00010f]
+2017/07/07 00:30:50 Considering device: ITB-1106B-MIC1
+2017/07/07 00:30:50 Appending MIC1 to mic array...
+2017/07/07 00:30:50 Considering device: ITB-1106B-MIC2
+2017/07/07 00:30:50 Appending MIC2 to mic array...
+2017/07/07 00:30:50 Considering device: ITB-1106B-DSP1
+2017/07/07 00:30:50 Appending DSP1 to DSP array...
+2017/07/07 00:30:50 Considering device: ITB-1106B-D1
+2017/07/07 00:30:50 Considering device: ITB-1106B-D2
+2017/07/07 00:30:50 Considering device: ITB-1106B-HDMISouth
+2017/07/07 00:30:50 Considering device: ITB-1106B-HDMIWest
+2017/07/07 00:30:50 Considering device: ITB-1106B-Via1
+2017/07/07 00:30:50 Considering device: ITB-1106B-Via2
+2017/07/07 00:30:50 Considering device: ITB-1106B-CP1
+2017/07/07 00:30:50 Considering device: ITB-1106B-CP2
+2017/07/07 00:30:50 Considering device: ITB-1106B-SW1
+2017/07/07 00:30:50 Generating status commands from STATUS_VolumeDSP
+2017/07/07 00:30:50 Generating STATUS_VolumeDSP commands agains mics...
+2017/07/07 00:30:50 Getting data from URL: http://localhost:8006/buildings/ITB/rooms/1106B/devices/roles/DSP...
+2017/07/07 00:30:50 Done.
+2017/07/07 00:30:50 Considering mic MIC1...
+2017/07/07 00:30:50 Port configuration identified for mic MIC1 and DSP DSP1
+2017/07/07 00:30:50 Considering mic MIC2...
+2017/07/07 00:30:50 Port configuration identified for mic MIC2 and DSP DSP1
+2017/07/07 00:30:50 Generating DSP status command: STATUS_VolumeDSP against device: {%!s(int=81) DSP1 BLU 50 10.5.34.6 %!s(bool=false) %!s(bool=false) {%!s(int=1) Information Technology Building ITB BYU Office of Information Technology} {%!s(int=30) 1106B AV Conference Room With Multiple Displays {%!s(int=0)   } [] %!s(int=0) {%!s(int=0)     []} } blu-dsp  [DSP AudioOut] %!s(*bool=<nil>) %!s(*int=<nil>) %!s(*bool=<nil>) [] %!s(bool=false) [{MIC1 00010a DSP1 DSP1} {MIC2 00010b DSP1 DSP1} {SW1 00010e DSP1 DSP1} {SW1 00010f DSP1 DSP1}] [{SetVolume {%!s(int=0) SetVolumeDSP /:address/:input/volume/set/:level } http://localhost:8009 %!s(int=0)} {Mute {%!s(int=0) MuteDSP /:address/:input/volume/mute } http://localhost:8009 %!s(int=0)} {UnMute {%!s(int=0) UnMuteDSP /:address/:input/volume/unmute } http://localhost:8009 %!s(int=0)} {STATUS_VolumeDSP {%!s(int=0) StatusVolumeDSP /:address/:input/volume/level } http://localhost:8009 %!s(int=0)} {STATUS_MutedDSP {%!s(int=0) StatusMuteDSP /:address/:input/mute/status } http://localhost:8009 %!s(int=0)}]}
+2017/07/07 00:30:50 Getting data from URL: http://localhost:8006/buildings/ITB/rooms/1106B/devices/MIC1...
+2017/07/07 00:30:50 Done.
+2017/07/07 00:30:50 Getting data from URL: http://localhost:8006/buildings/ITB/rooms/1106B/devices/MIC2...
+2017/07/07 00:30:50 Done.
+2017/07/07 00:30:50 Getting data from URL: http://localhost:8006/buildings/ITB/rooms/1106B/devices/SW1...
+2017/07/07 00:30:50 Done.
+2017/07/07 00:30:50 Getting data from URL: http://localhost:8006/buildings/ITB/rooms/1106B/devices/SW1...
+2017/07/07 00:30:50 Done.
+2017/07/07 00:30:50 All commands generated: 
+
+2017/07/07 00:30:50 Command: STATUS_Blanked against device D1, destination device: D1, parameters: map[address:10.66.9.114]
+2017/07/07 00:30:50 Command: STATUS_Blanked against device D2, destination device: D2, parameters: map[address:10.66.9.140]
+2017/07/07 00:30:50 Command: STATUS_Power against device D1, destination device: D1, parameters: map[address:10.66.9.114]
+2017/07/07 00:30:50 Command: STATUS_Power against device D2, destination device: D2, parameters: map[address:10.66.9.140]
+2017/07/07 00:30:50 Command:  against device DSP1, destination device: MIC1, parameters: map[input:00010a address:10.5.34.6]
+2017/07/07 00:30:50 Command:  against device DSP1, destination device: MIC2, parameters: map[input:00010b address:10.5.34.6]
+2017/07/07 00:30:50 Command: STATUS_MutedDSP against device DSP1, destination device: DSP1, parameters: map[address:10.5.34.6 input:00010f]
+2017/07/07 00:30:50 Command: STATUS_MutedDSP against device DSP1, destination device: DSP1, parameters: map[address:10.5.34.6 input:00010f]
+2017/07/07 00:30:50 Command: STATUS_Input against device SW1, destination device: DSP1, parameters: map[address:10.66.9.179 port:0]
+2017/07/07 00:30:50 Command: STATUS_Input against device SW1, destination device: D1, parameters: map[address:10.66.9.179 port:1]
+2017/07/07 00:30:50 Command: STATUS_Input against device SW1, destination device: D2, parameters: map[address:10.66.9.179 port:2]
+2017/07/07 00:30:50 Command:  against device DSP1, destination device: MIC1, parameters: map[input:00010a address:10.5.34.6]
+2017/07/07 00:30:50 Command:  against device DSP1, destination device: MIC2, parameters: map[input:00010b address:10.5.34.6]
+2017/07/07 00:30:50 Command: STATUS_MutedDSP against device DSP1, destination device: DSP1, parameters: map[address:10.5.34.6 input:00010f]
+2017/07/07 00:30:50 Command: STATUS_MutedDSP against device DSP1, destination device: DSP1, parameters: map[input:00010f address:10.5.34.6]
+2017/07/07 00:30:50 Command:  against device DSP1, destination device: MIC1, parameters: map[input:00010a address:10.5.34.6]
+2017/07/07 00:30:50 Command:  against device DSP1, destination device: MIC2, parameters: map[input:00010b address:10.5.34.6]
+2017/07/07 00:30:50 Command: STATUS_VolumeDSP against device DSP1, destination device: DSP1, parameters: map[address:10.5.34.6 input:00010f]
+2017/07/07 00:30:50 Command: STATUS_VolumeDSP against device DSP1, destination device: DSP1, parameters: map[address:10.5.34.6 input:00010f]
+2017/07/07 00:30:50 Running commands...
+2017/07/07 00:30:50 Building device map
+
+2017/07/07 00:30:50 Command: STATUS_Blanked against device D1, destination device: D1, parameters: map[address:10.66.9.114]
+2017/07/07 00:30:50 Command: STATUS_Blanked against device D2, destination device: D2, parameters: map[address:10.66.9.140]
+2017/07/07 00:30:50 Command: STATUS_Power against device D1, destination device: D1, parameters: map[address:10.66.9.114]
+2017/07/07 00:30:50 Command: STATUS_Power against device D2, destination device: D2, parameters: map[address:10.66.9.140]
+2017/07/07 00:30:50 Command:  against device DSP1, destination device: MIC1, parameters: map[input:00010a address:10.5.34.6]
+2017/07/07 00:30:50 Command:  against device DSP1, destination device: MIC2, parameters: map[input:00010b address:10.5.34.6]
+2017/07/07 00:30:50 Command: STATUS_MutedDSP against device DSP1, destination device: DSP1, parameters: map[address:10.5.34.6 input:00010f]
+2017/07/07 00:30:50 Command: STATUS_MutedDSP against device DSP1, destination device: DSP1, parameters: map[input:00010f address:10.5.34.6]
+2017/07/07 00:30:50 Command: STATUS_Input against device SW1, destination device: DSP1, parameters: map[address:10.66.9.179 port:0]
+2017/07/07 00:30:50 Command: STATUS_Input against device SW1, destination device: D1, parameters: map[address:10.66.9.179 port:1]
+2017/07/07 00:30:50 Command: STATUS_Input against device SW1, destination device: D2, parameters: map[address:10.66.9.179 port:2]
+2017/07/07 00:30:50 Command:  against device DSP1, destination device: MIC1, parameters: map[input:00010a address:10.5.34.6]
+2017/07/07 00:30:50 Command:  against device DSP1, destination device: MIC2, parameters: map[address:10.5.34.6 input:00010b]
+2017/07/07 00:30:50 Command: STATUS_MutedDSP against device DSP1, destination device: DSP1, parameters: map[address:10.5.34.6 input:00010f]
+2017/07/07 00:30:50 Command: STATUS_MutedDSP against device DSP1, destination device: DSP1, parameters: map[address:10.5.34.6 input:00010f]
+2017/07/07 00:30:50 Command:  against device DSP1, destination device: MIC1, parameters: map[input:00010a address:10.5.34.6]
+2017/07/07 00:30:50 Command:  against device DSP1, destination device: MIC2, parameters: map[input:00010b address:10.5.34.6]
+2017/07/07 00:30:50 Command: STATUS_VolumeDSP against device DSP1, destination device: DSP1, parameters: map[address:10.5.34.6 input:00010f]
+2017/07/07 00:30:50 Command: STATUS_VolumeDSP against device DSP1, destination device: DSP1, parameters: map[address:10.5.34.6 input:00010f]
+2017/07/07 00:30:50 Creating channel
+2017/07/07 00:30:50 Commands getting issued: 
+
+2017/07/07 00:30:50 Command: STATUS_Blanked against device D1, destination device: D1, parameters: map[address:10.66.9.114]
+2017/07/07 00:30:50 Command: STATUS_Power against device D1, destination device: D1, parameters: map[address:10.66.9.114]
+2017/07/07 00:30:50 Commands getting issued: 
+
+2017/07/07 00:30:50 Command: STATUS_Blanked against device D2, destination device: D2, parameters: map[address:10.66.9.140]
+2017/07/07 00:30:50 Command: STATUS_Power against device D2, destination device: D2, parameters: map[address:10.66.9.140]
+2017/07/07 00:30:50 Commands getting issued: 
+
+2017/07/07 00:30:50 Command:  against device DSP1, destination device: MIC1, parameters: map[address:10.5.34.6 input:00010a]
+2017/07/07 00:30:50 Command:  against device DSP1, destination device: MIC2, parameters: map[input:00010b address:10.5.34.6]
+2017/07/07 00:30:50 Command: STATUS_MutedDSP against device DSP1, destination device: DSP1, parameters: map[address:10.5.34.6 input:00010f]
+2017/07/07 00:30:50 Command: STATUS_MutedDSP against device DSP1, destination device: DSP1, parameters: map[address:10.5.34.6 input:00010f]
+2017/07/07 00:30:50 Command:  against device DSP1, destination device: MIC1, parameters: map[input:00010a address:10.5.34.6]
+2017/07/07 00:30:50 Issuing commands...
+
+2017/07/07 00:30:50 Command: STATUS_Blanked against device D2, destination device: D2, parameters: map[address:10.66.9.140]
+2017/07/07 00:30:50 Formal: address, actual: 10.66.9.140
+2017/07/07 00:30:50 Sending requqest to http://localhost:8005/10.66.9.140/display/status
+2017/07/07 00:30:50 Command:  against device DSP1, destination device: MIC2, parameters: map[input:00010b address:10.5.34.6]
+2017/07/07 00:30:50 Command: STATUS_MutedDSP against device DSP1, destination device: DSP1, parameters: map[address:10.5.34.6 input:00010f]
+2017/07/07 00:30:50 Command: STATUS_MutedDSP against device DSP1, destination device: DSP1, parameters: map[address:10.5.34.6 input:00010f]
+2017/07/07 00:30:50 Command:  against device DSP1, destination device: MIC1, parameters: map[input:00010a address:10.5.34.6]
+2017/07/07 00:30:50 Command:  against device DSP1, destination device: MIC2, parameters: map[input:00010b address:10.5.34.6]
+2017/07/07 00:30:50 Command: STATUS_VolumeDSP against device DSP1, destination device: DSP1, parameters: map[address:10.5.34.6 input:00010f]
+2017/07/07 00:30:50 Command: STATUS_VolumeDSP against device DSP1, destination device: DSP1, parameters: map[address:10.5.34.6 input:00010f]
+2017/07/07 00:30:50 Commands getting issued: 
+
+2017/07/07 00:30:50 Command: STATUS_Input against device SW1, destination device: DSP1, parameters: map[address:10.66.9.179 port:0]
+2017/07/07 00:30:50 Command: STATUS_Input against device SW1, destination device: D1, parameters: map[address:10.66.9.179 port:1]
+2017/07/07 00:30:50 Command: STATUS_Input against device SW1, destination device: D2, parameters: map[address:10.66.9.179 port:2]
+2017/07/07 00:30:50 Waiting for commands to issue...
+2017/07/07 00:30:50 Issuing commands...
+
+2017/07/07 00:30:50 Issuing commands...
+
+2017/07/07 00:30:50 Command:  against device DSP1, destination device: MIC1, parameters: map[input:00010a address:10.5.34.6]
+2017/07/07 00:30:50 Command: STATUS_Input against device SW1, destination device: DSP1, parameters: map[address:10.66.9.179 port:0]
+2017/07/07 00:30:50 Formal: address, actual: 10.66.9.179
+2017/07/07 00:30:50 Formal: port, actual: 0
+2017/07/07 00:30:50 Sending requqest to http://localhost:8011/10.66.9.179/input/get/0
+2017/07/07 00:30:50 Formal: input, actual: 00010a
+2017/07/07 00:30:50 Could not find parameter :input issuing the command 
+2017/07/07 00:30:50 Formal: address, actual: 10.5.34.6
+2017/07/07 00:30:50 Could not find parameter :address issuing the command 
+2017/07/07 00:30:50 Sending requqest to 
+2017/07/07 00:30:50 Error getting response from DSP1
+2017/07/07 00:30:50 Command:  against device DSP1, destination device: MIC2, parameters: map[input:00010b address:10.5.34.6]
+2017/07/07 00:30:50 Formal: input, actual: 00010b
+2017/07/07 00:30:50 Issuing commands...
+
+2017/07/07 00:30:50 Command: STATUS_Blanked against device D1, destination device: D1, parameters: map[address:10.66.9.114]
+2017/07/07 00:30:50 Formal: address, actual: 10.66.9.114
+2017/07/07 00:30:50 Sending requqest to http://localhost:8005/10.66.9.114/display/status
+2017/07/07 00:30:50 Could not find parameter :input issuing the command 
+2017/07/07 00:30:50 Formal: address, actual: 10.5.34.6
+2017/07/07 00:30:50 Could not find parameter :address issuing the command 
+2017/07/07 00:30:50 Sending requqest to 
+2017/07/07 00:30:50 Error getting response from DSP1
+2017/07/07 00:30:50 Command: STATUS_MutedDSP against device DSP1, destination device: DSP1, parameters: map[address:10.5.34.6 input:00010f]
+2017/07/07 00:30:50 Formal: address, actual: 10.5.34.6
+2017/07/07 00:30:50 Formal: input, actual: 00010f
+2017/07/07 00:30:50 Sending requqest to http://localhost:8009/10.5.34.6/00010f/mute/status
+2017/07/07 00:30:50 microservice returned: {"input":"3"}
+2017/07/07 00:30:50 Copying data into output
+2017/07/07 00:30:50 input maps to 3
+2017/07/07 00:30:50 Command: STATUS_Input against device SW1, destination device: D1, parameters: map[address:10.66.9.179 port:1]
+2017/07/07 00:30:50 Formal: address, actual: 10.66.9.179
+2017/07/07 00:30:50 Formal: port, actual: 1
+2017/07/07 00:30:50 Sending requqest to http://localhost:8011/10.66.9.179/input/get/1
+2017/07/07 00:30:50 microservice returned: {"blanked":false}
+2017/07/07 00:30:50 Copying data into output
+2017/07/07 00:30:50 blanked maps to false
+2017/07/07 00:30:50 Command: STATUS_Power against device D2, destination device: D2, parameters: map[address:10.66.9.140]
+2017/07/07 00:30:50 Formal: address, actual: 10.66.9.140
+2017/07/07 00:30:50 Sending requqest to http://localhost:8012/10.66.9.140/power/status
+2017/07/07 00:30:50 microservice returned: {"input":"3"}
+2017/07/07 00:30:50 Copying data into output
+2017/07/07 00:30:50 input maps to 3
+2017/07/07 00:30:50 Command: STATUS_Input against device SW1, destination device: D2, parameters: map[address:10.66.9.179 port:2]
+2017/07/07 00:30:50 Formal: address, actual: 10.66.9.179
+2017/07/07 00:30:50 Formal: port, actual: 2
+2017/07/07 00:30:50 Sending requqest to http://localhost:8011/10.66.9.179/input/get/2
+2017/07/07 00:30:50 microservice returned: {"input":"3"}
+2017/07/07 00:30:50 Copying data into output
+2017/07/07 00:30:50 input maps to 3
+2017/07/07 00:30:50 Writing output to channel...
+2017/07/07 00:30:50 outputs from device ITB-1106B-SW1
+2017/07/07 00:30:50 input maps to 3
+2017/07/07 00:30:50 outputs from device ITB-1106B-SW1
+2017/07/07 00:30:50 input maps to 3
+2017/07/07 00:30:50 outputs from device ITB-1106B-SW1
+2017/07/07 00:30:50 input maps to 3
+2017/07/07 00:30:50 Done acquiring statuses from  ITB-1106B-SW1
+2017/07/07 00:30:50 microservice returned: {"power":"standby"}
+2017/07/07 00:30:50 Copying data into output
+2017/07/07 00:30:50 power maps to standby
+2017/07/07 00:30:50 Writing output to channel...
+2017/07/07 00:30:50 outputs from device ITB-1106B-D2
+2017/07/07 00:30:50 blanked maps to false
+2017/07/07 00:30:50 outputs from device ITB-1106B-D2
+2017/07/07 00:30:50 power maps to standby
+2017/07/07 00:30:50 Done acquiring statuses from  ITB-1106B-D2
+2017/07/07 00:30:50 microservice returned: {"blanked":true}
+2017/07/07 00:30:50 Copying data into output
+2017/07/07 00:30:50 blanked maps to true
+2017/07/07 00:30:50 Command: STATUS_Power against device D1, destination device: D1, parameters: map[address:10.66.9.114]
+2017/07/07 00:30:50 Formal: address, actual: 10.66.9.114
+2017/07/07 00:30:50 Sending requqest to http://localhost:8012/10.66.9.114/power/status
+2017/07/07 00:30:50 microservice returned: {"muted":false}
+2017/07/07 00:30:50 Copying data into output
+2017/07/07 00:30:50 muted maps to false
+2017/07/07 00:30:50 Command: STATUS_MutedDSP against device DSP1, destination device: DSP1, parameters: map[address:10.5.34.6 input:00010f]
+2017/07/07 00:30:50 Formal: address, actual: 10.5.34.6
+2017/07/07 00:30:50 Formal: input, actual: 00010f
+2017/07/07 00:30:50 Sending requqest to http://localhost:8009/10.5.34.6/00010f/mute/status
+2017/07/07 00:30:50 microservice returned: {"power":"standby"}
+2017/07/07 00:30:50 Copying data into output
+2017/07/07 00:30:50 power maps to standby
+2017/07/07 00:30:50 Writing output to channel...
+2017/07/07 00:30:50 outputs from device ITB-1106B-D1
+2017/07/07 00:30:50 blanked maps to true
+2017/07/07 00:30:50 outputs from device ITB-1106B-D1
+2017/07/07 00:30:50 power maps to standby
+2017/07/07 00:30:50 Done acquiring statuses from  ITB-1106B-D1
+2017/07/07 00:30:50 microservice returned: {"muted":false}
+2017/07/07 00:30:50 Copying data into output
+2017/07/07 00:30:50 muted maps to false
+2017/07/07 00:30:50 Command:  against device DSP1, destination device: MIC1, parameters: map[input:00010a address:10.5.34.6]
+2017/07/07 00:30:50 Formal: input, actual: 00010a
+2017/07/07 00:30:50 Could not find parameter :input issuing the command 
+2017/07/07 00:30:50 Formal: address, actual: 10.5.34.6
+2017/07/07 00:30:50 Could not find parameter :address issuing the command 
+2017/07/07 00:30:50 Sending requqest to 
+2017/07/07 00:30:50 Error getting response from DSP1
+2017/07/07 00:30:50 Command:  against device DSP1, destination device: MIC2, parameters: map[input:00010b address:10.5.34.6]
+2017/07/07 00:30:50 Formal: input, actual: 00010b
+2017/07/07 00:30:50 Could not find parameter :input issuing the command 
+2017/07/07 00:30:50 Formal: address, actual: 10.5.34.6
+2017/07/07 00:30:50 Could not find parameter :address issuing the command 
+2017/07/07 00:30:50 Sending requqest to 
+2017/07/07 00:30:50 Error getting response from DSP1
+2017/07/07 00:30:50 Command: STATUS_MutedDSP against device DSP1, destination device: DSP1, parameters: map[address:10.5.34.6 input:00010f]
+2017/07/07 00:30:50 Formal: address, actual: 10.5.34.6
+2017/07/07 00:30:50 Formal: input, actual: 00010f
+2017/07/07 00:30:50 Sending requqest to http://localhost:8009/10.5.34.6/00010f/mute/status
+2017/07/07 00:30:50 microservice returned: {"muted":false}
+2017/07/07 00:30:50 Copying data into output
+2017/07/07 00:30:50 muted maps to false
+2017/07/07 00:30:50 Command: STATUS_MutedDSP against device DSP1, destination device: DSP1, parameters: map[address:10.5.34.6 input:00010f]
+2017/07/07 00:30:50 Formal: address, actual: 10.5.34.6
+2017/07/07 00:30:50 Formal: input, actual: 00010f
+2017/07/07 00:30:50 Sending requqest to http://localhost:8009/10.5.34.6/00010f/mute/status
+2017/07/07 00:30:50 microservice returned: {"muted":false}
+2017/07/07 00:30:50 Copying data into output
+2017/07/07 00:30:50 muted maps to false
+2017/07/07 00:30:50 Command:  against device DSP1, destination device: MIC1, parameters: map[input:00010a address:10.5.34.6]
+2017/07/07 00:30:50 Formal: input, actual: 00010a
+2017/07/07 00:30:50 Could not find parameter :input issuing the command 
+2017/07/07 00:30:50 Formal: address, actual: 10.5.34.6
+2017/07/07 00:30:50 Could not find parameter :address issuing the command 
+2017/07/07 00:30:50 Sending requqest to 
+2017/07/07 00:30:50 Error getting response from DSP1
+2017/07/07 00:30:50 Command:  against device DSP1, destination device: MIC2, parameters: map[input:00010b address:10.5.34.6]
+2017/07/07 00:30:50 Formal: input, actual: 00010b
+2017/07/07 00:30:50 Could not find parameter :input issuing the command 
+2017/07/07 00:30:50 Formal: address, actual: 10.5.34.6
+2017/07/07 00:30:50 Could not find parameter :address issuing the command 
+2017/07/07 00:30:50 Sending requqest to 
+2017/07/07 00:30:50 Error getting response from DSP1
+2017/07/07 00:30:50 Command: STATUS_VolumeDSP against device DSP1, destination device: DSP1, parameters: map[address:10.5.34.6 input:00010f]
+2017/07/07 00:30:50 Formal: address, actual: 10.5.34.6
+2017/07/07 00:30:50 Formal: input, actual: 00010f
+2017/07/07 00:30:50 Sending requqest to http://localhost:8009/10.5.34.6/00010f/volume/level
+2017/07/07 00:30:51 microservice returned: {"volume":101}
+2017/07/07 00:30:51 Copying data into output
+2017/07/07 00:30:51 volume maps to 101
+2017/07/07 00:30:51 Command: STATUS_VolumeDSP against device DSP1, destination device: DSP1, parameters: map[address:10.5.34.6 input:00010f]
+2017/07/07 00:30:51 Formal: address, actual: 10.5.34.6
+2017/07/07 00:30:51 Formal: input, actual: 00010f
+2017/07/07 00:30:51 Sending requqest to http://localhost:8009/10.5.34.6/00010f/volume/level
+2017/07/07 00:30:51 microservice returned: {"volume":101}
+2017/07/07 00:30:51 Copying data into output
+2017/07/07 00:30:51 volume maps to 101
+2017/07/07 00:30:51 Writing output to channel...
+2017/07/07 00:30:51 outputs from device ITB-1106B-DSP1
+2017/07/07 00:30:51 outputs from device ITB-1106B-DSP1
+2017/07/07 00:30:51 outputs from device ITB-1106B-DSP1
+2017/07/07 00:30:51 outputs from device ITB-1106B-DSP1
+2017/07/07 00:30:51 outputs from device ITB-1106B-DSP1
+2017/07/07 00:30:51 outputs from device ITB-1106B-DSP1
+2017/07/07 00:30:51 outputs from device ITB-1106B-DSP1
+2017/07/07 00:30:51 muted maps to false
+2017/07/07 00:30:51 outputs from device ITB-1106B-DSP1
+2017/07/07 00:30:51 muted maps to false
+2017/07/07 00:30:51 outputs from device ITB-1106B-DSP1
+2017/07/07 00:30:51 outputs from device ITB-1106B-DSP1
+2017/07/07 00:30:51 outputs from device ITB-1106B-DSP1
+2017/07/07 00:30:51 outputs from device ITB-1106B-DSP1
+2017/07/07 00:30:51 outputs from device ITB-1106B-DSP1
+2017/07/07 00:30:51 outputs from device ITB-1106B-DSP1
+2017/07/07 00:30:51 outputs from device ITB-1106B-DSP1
+2017/07/07 00:30:51 muted maps to false
+2017/07/07 00:30:51 outputs from device ITB-1106B-DSP1
+2017/07/07 00:30:51 muted maps to false
+2017/07/07 00:30:51 outputs from device ITB-1106B-DSP1
+2017/07/07 00:30:51 outputs from device ITB-1106B-DSP1
+2017/07/07 00:30:51 outputs from device ITB-1106B-DSP1
+2017/07/07 00:30:51 outputs from device ITB-1106B-DSP1
+2017/07/07 00:30:51 outputs from device ITB-1106B-DSP1
+2017/07/07 00:30:51 outputs from device ITB-1106B-DSP1
+2017/07/07 00:30:51 outputs from device ITB-1106B-DSP1
+2017/07/07 00:30:51 volume maps to 101
+2017/07/07 00:30:51 outputs from device ITB-1106B-DSP1
+2017/07/07 00:30:51 volume maps to 101
+2017/07/07 00:30:51 Done acquiring statuses from  ITB-1106B-DSP1
+2017/07/07 00:30:51 Done. Closing channel...
+2017/07/07 00:30:51 Appending status: map[input:3] of DSP1 to output
+2017/07/07 00:30:51 Appending status: map[input:3] of D1 to output
+2017/07/07 00:30:51 Appending status: map[input:3] of D2 to output
+2017/07/07 00:30:51 Appending status: map[blanked:false] of D2 to output
+2017/07/07 00:30:51 Appending status: map[power:standby] of D2 to output
+2017/07/07 00:30:51 Appending status: map[blanked:true] of D1 to output
+2017/07/07 00:30:51 Appending status: map[power:standby] of D1 to output
+2017/07/07 00:30:51 Error querying status of device: DSP1: Could not find parameter :input issuing the command 
+2017/07/07 00:30:51 Publishing event: {"hostname":"linux-knight","timestamp":"2017-07-07T00:30:51-06:00","localEnvironment":true,"event":{"type":0,"eventCause":3,"device":"CP3","eventInfoKey":"Error String","eventInfoValue":"Error querying status for destination: MIC1: Could not find parameter :input issuing the command "},"building":"ITB","room":"1101"}
+2017/07/07 00:30:51 Appending status: map[] of MIC1 to output
+2017/07/07 00:30:51 Error querying status of device: DSP1: Could not find parameter :address issuing the command 
+2017/07/07 00:30:51 Publishing event: {"hostname":"linux-knight","timestamp":"2017-07-07T00:30:51-06:00","localEnvironment":true,"event":{"type":0,"eventCause":3,"device":"CP3","eventInfoKey":"Error String","eventInfoValue":"Error querying status for destination: MIC1: Could not find parameter :address issuing the command "},"building":"ITB","room":"1101"}
+2017/07/07 00:30:51 Appending status: map[] of MIC1 to output
+2017/07/07 00:30:51 Error querying status of device: DSP1: Get : unsupported protocol scheme ""
+2017/07/07 00:30:51 Publishing event: {"hostname":"linux-knight","timestamp":"2017-07-07T00:30:51-06:00","localEnvironment":true,"event":{"type":0,"eventCause":3,"device":"CP3","eventInfoKey":"Error String","eventInfoValue":"Error querying status for destination: MIC1: Get : unsupported protocol scheme \"\""},"building":"ITB","room":"1101"}
+2017/07/07 00:30:51 Appending status: map[] of MIC1 to output
+2017/07/07 00:30:51 Error querying status of device: DSP1: Could not find parameter :input issuing the command 
+2017/07/07 00:30:51 Publishing event: {"hostname":"linux-knight","timestamp":"2017-07-07T00:30:51-06:00","localEnvironment":true,"event":{"type":0,"eventCause":3,"device":"CP3","eventInfoKey":"Error String","eventInfoValue":"Error querying status for destination: MIC2: Could not find parameter :input issuing the command "},"building":"ITB","room":"1101"}
+2017/07/07 00:30:51 Appending status: map[] of MIC2 to output
+2017/07/07 00:30:51 Error querying status of device: DSP1: Could not find parameter :address issuing the command 
+2017/07/07 00:30:51 Publishing event: {"hostname":"linux-knight","timestamp":"2017-07-07T00:30:51-06:00","localEnvironment":true,"event":{"type":0,"eventCause":3,"device":"CP3","eventInfoKey":"Error String","eventInfoValue":"Error querying status for destination: MIC2: Could not find parameter :address issuing the command "},"building":"ITB","room":"1101"}
+2017/07/07 00:30:51 Appending status: map[] of MIC2 to output
+2017/07/07 00:30:51 Error querying status of device: DSP1: Get : unsupported protocol scheme ""
+2017/07/07 00:30:51 Publishing event: {"hostname":"linux-knight","timestamp":"2017-07-07T00:30:51-06:00","localEnvironment":true,"event":{"type":0,"eventCause":3,"device":"CP3","eventInfoKey":"Error String","eventInfoValue":"Error querying status for destination: MIC2: Get : unsupported protocol scheme \"\""},"building":"ITB","room":"1101"}
+2017/07/07 00:30:51 Appending status: map[] of MIC2 to output
+2017/07/07 00:30:51 Appending status: map[muted:false] of DSP1 to output
+2017/07/07 00:30:51 Appending status: map[muted:false] of DSP1 to output
+2017/07/07 00:30:51 Error querying status of device: DSP1: Could not find parameter :input issuing the command 
+2017/07/07 00:30:51 Publishing event: {"hostname":"linux-knight","timestamp":"2017-07-07T00:30:51-06:00","localEnvironment":true,"event":{"type":0,"eventCause":3,"device":"CP3","eventInfoKey":"Error String","eventInfoValue":"Error querying status for destination: MIC1: Could not find parameter :input issuing the command "},"building":"ITB","room":"1101"}
+2017/07/07 00:30:51 Appending status: map[] of MIC1 to output
+2017/07/07 00:30:51 Error querying status of device: DSP1: Could not find parameter :address issuing the command 
+2017/07/07 00:30:51 Publishing event: {"hostname":"linux-knight","timestamp":"2017-07-07T00:30:51-06:00","localEnvironment":true,"event":{"type":0,"eventCause":3,"device":"CP3","eventInfoKey":"Error String","eventInfoValue":"Error querying status for destination: MIC1: Could not find parameter :address issuing the command "},"building":"ITB","room":"1101"}
+2017/07/07 00:30:51 Appending status: map[] of MIC1 to output
+2017/07/07 00:30:51 Error querying status of device: DSP1: Get : unsupported protocol scheme ""
+2017/07/07 00:30:51 Publishing event: {"hostname":"linux-knight","timestamp":"2017-07-07T00:30:51-06:00","localEnvironment":true,"event":{"type":0,"eventCause":3,"device":"CP3","eventInfoKey":"Error String","eventInfoValue":"Error querying status for destination: MIC1: Get : unsupported protocol scheme \"\""},"building":"ITB","room":"1101"}
+2017/07/07 00:30:51 Appending status: map[] of MIC1 to output
+2017/07/07 00:30:51 Error querying status of device: DSP1: Could not find parameter :input issuing the command 
+2017/07/07 00:30:51 Publishing event: {"hostname":"linux-knight","timestamp":"2017-07-07T00:30:51-06:00","localEnvironment":true,"event":{"type":0,"eventCause":3,"device":"CP3","eventInfoKey":"Error String","eventInfoValue":"Error querying status for destination: MIC2: Could not find parameter :input issuing the command "},"building":"ITB","room":"1101"}
+2017/07/07 00:30:51 Appending status: map[] of MIC2 to output
+2017/07/07 00:30:51 Error querying status of device: DSP1: Could not find parameter :address issuing the command 
+2017/07/07 00:30:51 Publishing event: {"hostname":"linux-knight","timestamp":"2017-07-07T00:30:51-06:00","localEnvironment":true,"event":{"type":0,"eventCause":3,"device":"CP3","eventInfoKey":"Error String","eventInfoValue":"Error querying status for destination: MIC2: Could not find parameter :address issuing the command "},"building":"ITB","room":"1101"}
+2017/07/07 00:30:51 Appending status: map[] of MIC2 to output
+2017/07/07 00:30:51 Error querying status of device: DSP1: Get : unsupported protocol scheme ""
+2017/07/07 00:30:51 Publishing event: {"hostname":"linux-knight","timestamp":"2017-07-07T00:30:51-06:00","localEnvironment":true,"event":{"type":0,"eventCause":3,"device":"CP3","eventInfoKey":"Error String","eventInfoValue":"Error querying status for destination: MIC2: Get : unsupported protocol scheme \"\""},"building":"ITB","room":"1101"}
+2017/07/07 00:30:51 Appending status: map[] of MIC2 to output
+2017/07/07 00:30:51 Appending status: map[muted:false] of DSP1 to output
+2017/07/07 00:30:51 Appending status: map[muted:false] of DSP1 to output
+2017/07/07 00:30:51 Error querying status of device: DSP1: Could not find parameter :input issuing the command 
+2017/07/07 00:30:51 Publishing event: {"hostname":"linux-knight","timestamp":"2017-07-07T00:30:51-06:00","localEnvironment":true,"event":{"type":0,"eventCause":3,"device":"CP3","eventInfoKey":"Error String","eventInfoValue":"Error querying status for destination: MIC1: Could not find parameter :input issuing the command "},"building":"ITB","room":"1101"}
+2017/07/07 00:30:51 Appending status: map[] of MIC1 to output
+2017/07/07 00:30:51 Error querying status of device: DSP1: Could not find parameter :address issuing the command 
+2017/07/07 00:30:51 Publishing event: {"hostname":"linux-knight","timestamp":"2017-07-07T00:30:51-06:00","localEnvironment":true,"event":{"type":0,"eventCause":3,"device":"CP3","eventInfoKey":"Error String","eventInfoValue":"Error querying status for destination: MIC1: Could not find parameter :address issuing the command "},"building":"ITB","room":"1101"}
+2017/07/07 00:30:51 Appending status: map[] of MIC1 to output
+2017/07/07 00:30:51 Error querying status of device: DSP1: Get : unsupported protocol scheme ""
+2017/07/07 00:30:51 Publishing event: {"hostname":"linux-knight","timestamp":"2017-07-07T00:30:51-06:00","localEnvironment":true,"event":{"type":0,"eventCause":3,"device":"CP3","eventInfoKey":"Error String","eventInfoValue":"Error querying status for destination: MIC1: Get : unsupported protocol scheme \"\""},"building":"ITB","room":"1101"}
+2017/07/07 00:30:51 Appending status: map[] of MIC1 to output
+2017/07/07 00:30:51 Error querying status of device: DSP1: Could not find parameter :input issuing the command 
+2017/07/07 00:30:51 Publishing event: {"hostname":"linux-knight","timestamp":"2017-07-07T00:30:51-06:00","localEnvironment":true,"event":{"type":0,"eventCause":3,"device":"CP3","eventInfoKey":"Error String","eventInfoValue":"Error querying status for destination: MIC2: Could not find parameter :input issuing the command "},"building":"ITB","room":"1101"}
+2017/07/07 00:30:51 Appending status: map[] of MIC2 to output
+2017/07/07 00:30:51 Error querying status of device: DSP1: Could not find parameter :address issuing the command 
+2017/07/07 00:30:51 Publishing event: {"hostname":"linux-knight","timestamp":"2017-07-07T00:30:51-06:00","localEnvironment":true,"event":{"type":0,"eventCause":3,"device":"CP3","eventInfoKey":"Error String","eventInfoValue":"Error querying status for destination: MIC2: Could not find parameter :address issuing the command "},"building":"ITB","room":"1101"}
+2017/07/07 00:30:51 Appending status: map[] of MIC2 to output
+2017/07/07 00:30:51 Error querying status of device: DSP1: Get : unsupported protocol scheme ""
+2017/07/07 00:30:51 Publishing event: {"hostname":"linux-knight","timestamp":"2017-07-07T00:30:51-06:00","localEnvironment":true,"event":{"type":0,"eventCause":3,"device":"CP3","eventInfoKey":"Error String","eventInfoValue":"Error querying status for destination: MIC2: Get : unsupported protocol scheme \"\""},"building":"ITB","room":"1101"}
+2017/07/07 00:30:51 Appending status: map[] of MIC2 to output
+2017/07/07 00:30:51 Appending status: map[volume:101] of DSP1 to output
+2017/07/07 00:30:51 Appending status: map[volume:101] of DSP1 to output
+2017/07/07 00:30:51 Evaluating responses...
+2017/07/07 00:30:51 Checking generator: STATUS_InputVideoSwitcher
+2017/07/07 00:30:51 Evaluating response: input, 3 in evaluator STATUS_BlankedDefault
+2017/07/07 00:30:51 Getting data from URL: http://localhost:8006/buildings/ITB/rooms/1106B/devices/roles/VideoSwitcher...
+2017/07/07 00:30:51 Done.
+2017/07/07 00:30:51 Found a source device that matches the port returned: 3, Via2
+2017/07/07 00:30:51 Adding Device ITB-1106B-DSP1 to the map
+2017/07/07 00:30:51 Checking generator: STATUS_InputVideoSwitcher
+2017/07/07 00:30:51 Evaluating response: input, 3 in evaluator STATUS_BlankedDefault
+2017/07/07 00:30:51 Getting data from URL: http://localhost:8006/buildings/ITB/rooms/1106B/devices/roles/VideoSwitcher...
+2017/07/07 00:30:51 Done.
+2017/07/07 00:30:51 Found a source device that matches the port returned: 3, Via2
+2017/07/07 00:30:51 Adding Device ITB-1106B-D1 to the map
+2017/07/07 00:30:51 Checking generator: STATUS_InputVideoSwitcher
+2017/07/07 00:30:51 Evaluating response: input, 3 in evaluator STATUS_BlankedDefault
+2017/07/07 00:30:51 Getting data from URL: http://localhost:8006/buildings/ITB/rooms/1106B/devices/roles/VideoSwitcher...
+2017/07/07 00:30:51 Done.
+2017/07/07 00:30:51 Found a source device that matches the port returned: 3, Via2
+2017/07/07 00:30:51 Adding Device ITB-1106B-D2 to the map
+2017/07/07 00:30:51 Checking generator: STATUS_BlankedDefault
+2017/07/07 00:30:51 Evaluating response: blanked, %!s(bool=false) in evaluator STATUS_BlankedDefault
+2017/07/07 00:30:51 Checking generator: STATUS_PowerDefault
+2017/07/07 00:30:51 Evaluating response: power, standby in evaluator STATUS_PowerDefault
+2017/07/07 00:30:51 Checking generator: STATUS_BlankedDefault
+2017/07/07 00:30:51 Evaluating response: blanked, %!s(bool=true) in evaluator STATUS_BlankedDefault
+2017/07/07 00:30:51 Checking generator: STATUS_PowerDefault
+2017/07/07 00:30:51 Evaluating response: power, standby in evaluator STATUS_PowerDefault
+2017/07/07 00:30:51 Checking generator: STATUS_MutedDSP
+2017/07/07 00:30:51 Checking generator: STATUS_MutedDSP
+2017/07/07 00:30:51 Checking generator: STATUS_MutedDSP
+2017/07/07 00:30:51 Checking generator: STATUS_MutedDSP
+2017/07/07 00:30:51 Checking generator: STATUS_VolumeDSP
+2017/07/07 00:30:51 Checking generator: STATUS_VolumeDSP
+2017/07/07 00:30:51 Adding audio device: DSP1
+2017/07/07 00:30:51 Status map: map[input:Via2 muted:false volume:101]
+2017/07/07 00:30:51 Adding display: D1
+2017/07/07 00:30:51 Adding display: D2

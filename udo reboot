@@ -1,0 +1,19 @@
+[0;1;32m●[0m docker.service - Docker Application Container Engine
+   Loaded: loaded (/lib/systemd/system/docker.service; enabled; vendor preset: enabled)
+   Active: [0;1;32mactive (running)[0m since Mon 2017-08-07 23:52:39 MDT; 3min 23s ago
+     Docs: https://docs.docker.com
+ Main PID: 5376 (dockerd)
+   CGroup: /system.slice/docker.service
+           ├─5376 /usr/bin/dockerd -H fd://
+           └─5389 docker-containerd -l unix:///var/run/docker/libcontainerd/docker-containerd.sock --metrics-interval=0 --start-timeout 2m --state-dir /var/run/docker/libcontainerd/containerd --shim docker-containerd-shim --runtime docker-runc
+
+Aug 07 23:52:39 dell-knight dockerd[5376]: time="2017-08-07T23:52:39.630160286-06:00" level=warning msg="Your kernel does not support swap memory limit"
+Aug 07 23:52:39 dell-knight dockerd[5376]: time="2017-08-07T23:52:39.630208961-06:00" level=warning msg="Your kernel does not support cgroup rt period"
+Aug 07 23:52:39 dell-knight dockerd[5376]: time="2017-08-07T23:52:39.630215015-06:00" level=warning msg="Your kernel does not support cgroup rt runtime"
+Aug 07 23:52:39 dell-knight dockerd[5376]: time="2017-08-07T23:52:39.630503785-06:00" level=info msg="Loading containers: start."
+Aug 07 23:52:39 dell-knight dockerd[5376]: time="2017-08-07T23:52:39.734724408-06:00" level=info msg="Default bridge (docker0) is assigned with an IP address 172.17.0.0/16. Daemon option --bip can be used to set a preferred IP address"
+Aug 07 23:52:39 dell-knight dockerd[5376]: time="2017-08-07T23:52:39.800365472-06:00" level=info msg="Loading containers: done."
+Aug 07 23:52:39 dell-knight dockerd[5376]: time="2017-08-07T23:52:39.893886814-06:00" level=info msg="Daemon has completed initialization"
+Aug 07 23:52:39 dell-knight dockerd[5376]: time="2017-08-07T23:52:39.893916336-06:00" level=info msg="Docker daemon" commit=02c1d87 graphdriver=aufs version=17.06.0-ce
+Aug 07 23:52:39 dell-knight dockerd[5376]: time="2017-08-07T23:52:39.903263504-06:00" level=info msg="API listen on /var/run/docker.sock"
+Aug 07 23:52:39 dell-knight systemd[1]: Started Docker Application Container Engine.
