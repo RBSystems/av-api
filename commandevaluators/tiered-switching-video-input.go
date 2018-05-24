@@ -10,8 +10,8 @@ import (
 	"github.com/byuoitav/av-api/dbo"
 	"github.com/byuoitav/av-api/inputgraph"
 	"github.com/byuoitav/av-api/statusevaluators"
+	"github.com/byuoitav/common/events"
 	"github.com/byuoitav/configuration-database-microservice/structs"
-	"github.com/byuoitav/event-router-microservice/eventinfrastructure"
 	"github.com/fatih/color"
 )
 
@@ -329,9 +329,9 @@ func generateActionForNonSwitch(prev, cur inputgraph.Node, destination structs.D
 	m := make(map[string]string)
 	m["port"] = in
 
-	eventInfo := eventinfrastructure.EventInfo{
-		Type:           eventinfrastructure.CORESTATE,
-		EventCause:     eventinfrastructure.USERINPUT,
+	eventInfo := events.EventInfo{
+		Type:           events.CORESTATE,
+		EventCause:     events.USERINPUT,
 		Device:         destination.Name,
 		EventInfoKey:   "input",
 		EventInfoValue: selected,
@@ -358,7 +358,7 @@ func generateActionForNonSwitch(prev, cur inputgraph.Node, destination structs.D
 		Parameters:          m,
 		DeviceSpecific:      false,
 		Overridden:          false,
-		EventLog:            []eventinfrastructure.EventInfo{eventInfo},
+		EventLog:            []events.EventInfo{eventInfo},
 		Callback:            callbackEngine.Callback,
 	}
 	return tempAction, nil
@@ -395,9 +395,9 @@ func generateActionForSwitch(prev, cur, next inputgraph.Node, destination struct
 
 	log.Printf("params: %v", m)
 
-	eventInfo := eventinfrastructure.EventInfo{
-		Type:           eventinfrastructure.CORESTATE,
-		EventCause:     eventinfrastructure.USERINPUT,
+	eventInfo := events.EventInfo{
+		Type:           events.CORESTATE,
+		EventCause:     events.USERINPUT,
 		Device:         destination.Name,
 		EventInfoKey:   "input",
 		EventInfoValue: selected,
@@ -424,7 +424,7 @@ func generateActionForSwitch(prev, cur, next inputgraph.Node, destination struct
 		Parameters:          m,
 		DeviceSpecific:      false,
 		Overridden:          false,
-		EventLog:            []eventinfrastructure.EventInfo{eventInfo},
+		EventLog:            []events.EventInfo{eventInfo},
 		Callback:            callbackEngine.Callback,
 	}
 

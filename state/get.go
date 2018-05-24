@@ -10,8 +10,8 @@ import (
 
 	"github.com/byuoitav/av-api/base"
 	se "github.com/byuoitav/av-api/statusevaluators"
+	"github.com/byuoitav/common/events"
 	"github.com/byuoitav/configuration-database-microservice/structs"
-	"github.com/byuoitav/event-router-microservice/eventinfrastructure"
 	"github.com/fatih/color"
 )
 
@@ -102,7 +102,7 @@ func RunStatusCommands(commands []se.StatusCommand) (outputs []se.StatusResponse
 			if output.ErrorMessage != nil {
 				msg := fmt.Sprintf("problem querying status of device: %s with destination %s: %s", output.SourceDevice.Name, output.DestinationDevice.Name, *output.ErrorMessage)
 				log.Printf("%s", color.HiRedString("[error] %s", msg))
-				cause := eventinfrastructure.INTERNAL
+				cause := events.INTERNAL
 				base.PublishError(msg, cause)
 			}
 			//log.Printf("[state] appending status: %v of %s to output", output.Status, output.DestinationDevice.Name)

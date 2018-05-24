@@ -8,7 +8,7 @@ import (
 
 	"github.com/byuoitav/av-api/base"
 	"github.com/byuoitav/av-api/dbo"
-	"github.com/byuoitav/event-router-microservice/eventinfrastructure"
+	"github.com/byuoitav/common/events"
 )
 
 // BlankDisplay is struct that implements the CommandEvaluation struct
@@ -23,9 +23,9 @@ func (p *BlankDisplayDefault) Evaluate(room base.PublicRoom, requestor string) (
 	var actions []base.ActionStructure
 
 	//build event info
-	eventInfo := eventinfrastructure.EventInfo{
-		Type:           eventinfrastructure.CORESTATE,
-		EventCause:     eventinfrastructure.USERINPUT,
+	eventInfo := events.EventInfo{
+		Type:           events.CORESTATE,
+		EventCause:     events.USERINPUT,
 		EventInfoKey:   "blanked",
 		EventInfoValue: "true",
 		Requestor:      requestor,
@@ -67,7 +67,7 @@ func (p *BlankDisplayDefault) Evaluate(room base.PublicRoom, requestor string) (
 					Device:              device,
 					DestinationDevice:   destination,
 					DeviceSpecific:      false,
-					EventLog:            []eventinfrastructure.EventInfo{eventInfo},
+					EventLog:            []events.EventInfo{eventInfo},
 				})
 			}
 		}
@@ -101,7 +101,7 @@ func (p *BlankDisplayDefault) Evaluate(room base.PublicRoom, requestor string) (
 				Device:              device,
 				DestinationDevice:   destination,
 				DeviceSpecific:      true,
-				EventLog:            []eventinfrastructure.EventInfo{eventInfo},
+				EventLog:            []events.EventInfo{eventInfo},
 			})
 		}
 	}

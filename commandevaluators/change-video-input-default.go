@@ -6,8 +6,8 @@ import (
 
 	"github.com/byuoitav/av-api/base"
 	"github.com/byuoitav/av-api/dbo"
+	"github.com/byuoitav/common/events"
 	"github.com/byuoitav/configuration-database-microservice/structs"
-	"github.com/byuoitav/event-router-microservice/eventinfrastructure"
 )
 
 //ChangeVideoInputDefault is struct that implements the CommandEvaluation struct
@@ -103,9 +103,9 @@ func generateChangeInputByDevice(dev base.Device, room, building, generatingEval
 		destination.Display = true
 	}
 
-	eventInfo := eventinfrastructure.EventInfo{
-		Type:           eventinfrastructure.CORESTATE,
-		EventCause:     eventinfrastructure.USERINPUT,
+	eventInfo := events.EventInfo{
+		Type:           events.CORESTATE,
+		EventCause:     events.USERINPUT,
 		Device:         dev.Name,
 		EventInfoKey:   "input",
 		EventInfoValue: portSource,
@@ -119,7 +119,7 @@ func generateChangeInputByDevice(dev base.Device, room, building, generatingEval
 		Parameters:          paramMap,
 		DeviceSpecific:      true,
 		Overridden:          false,
-		EventLog:            []eventinfrastructure.EventInfo{eventInfo},
+		EventLog:            []events.EventInfo{eventInfo},
 	}
 
 	return
@@ -166,9 +166,9 @@ func generateChangeInputByRole(role, input, room, building, generatingEvaluator,
 			dest.Display = true
 		}
 
-		eventInfo := eventinfrastructure.EventInfo{
-			Type:           eventinfrastructure.USERACTION,
-			EventCause:     eventinfrastructure.USERINPUT,
+		eventInfo := events.EventInfo{
+			Type:           events.USERACTION,
+			EventCause:     events.USERINPUT,
 			Device:         d.Name,
 			EventInfoKey:   "input",
 			EventInfoValue: source,
@@ -183,7 +183,7 @@ func generateChangeInputByRole(role, input, room, building, generatingEvaluator,
 			Parameters:          paramMap,
 			DeviceSpecific:      false,
 			Overridden:          false,
-			EventLog:            []eventinfrastructure.EventInfo{eventInfo},
+			EventLog:            []events.EventInfo{eventInfo},
 		}
 
 		actions = append(actions, action)

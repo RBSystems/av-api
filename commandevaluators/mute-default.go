@@ -7,8 +7,8 @@ import (
 	"strings"
 
 	"github.com/byuoitav/av-api/base"
-	"github.com/byuoitav/av-api/dbo"
-	"github.com/byuoitav/event-router-microservice/eventinfrastructure"
+	"github.com/byuoitav/common/db"
+	"github.com/byuoitav/common/events"
 )
 
 //MuteDefault implements CommandEvaluation
@@ -29,9 +29,9 @@ func (p *MuteDefault) Evaluate(room base.PublicRoom, requestor string) ([]base.A
 		AudioDevice: true,
 	}
 
-	eventInfo := eventinfrastructure.EventInfo{
-		Type:           eventinfrastructure.CORESTATE,
-		EventCause:     eventinfrastructure.USERINPUT,
+	eventInfo := events.EventInfo{
+		Type:           events.CORESTATE,
+		EventCause:     events.USERINPUT,
 		EventInfoKey:   "muted",
 		EventInfoValue: "true",
 		Requestor:      requestor,
@@ -41,7 +41,7 @@ func (p *MuteDefault) Evaluate(room base.PublicRoom, requestor string) ([]base.A
 
 		log.Printf("Room-wide Mute request recieved. Retrieving all devices.")
 
-		devices, err := dbo.GetDevicesByBuildingAndRoomAndRole(room.Building, room.Room, "AudioOut")
+		devices, err := db.GetDB().GetDevicesByBuildingAndRoomAndRole(room.Building, room.Room, "AudioOut")
 		if err != nil {
 			return []base.ActionStructure{}, 0, err
 		}
@@ -65,7 +65,7 @@ func (p *MuteDefault) Evaluate(room base.PublicRoom, requestor string) ([]base.A
 					Device:              device,
 					DestinationDevice:   destination,
 					DeviceSpecific:      false,
-					EventLog:            []eventinfrastructure.EventInfo{eventInfo},
+					EventLog:            []events.EventInfo{eventInfo},
 				})
 			}
 		}
@@ -79,7 +79,7 @@ func (p *MuteDefault) Evaluate(room base.PublicRoom, requestor string) ([]base.A
 		if audioDevice.Muted != nil && *audioDevice.Muted {
 
 			//get the device
-			device, err := dbo.GetDeviceByName(room.Building, room.Room, audioDevice.Name)
+			device, err := db.GetDB().GetDeviceByName(room.Building, room.Room, audioDevice.Name)
 			if err != nil {
 				return []base.ActionStructure{}, 0, err
 			}
@@ -93,7 +93,7 @@ func (p *MuteDefault) Evaluate(room base.PublicRoom, requestor string) ([]base.A
 				Device:              device,
 				DestinationDevice:   destination,
 				DeviceSpecific:      true,
-				EventLog:            []eventinfrastructure.EventInfo{eventInfo},
+				EventLog:            []events.EventInfo{eventInfo},
 			})
 
 		}

@@ -7,8 +7,8 @@ import (
 
 	"github.com/byuoitav/av-api/base"
 	"github.com/byuoitav/av-api/dbo"
+	"github.com/byuoitav/common/events"
 	"github.com/byuoitav/configuration-database-microservice/structs"
-	"github.com/byuoitav/event-router-microservice/eventinfrastructure"
 	"github.com/fatih/color"
 )
 
@@ -25,9 +25,9 @@ func (p *PowerOnDefault) Evaluate(room base.PublicRoom, requestor string) (actio
 	log.Printf("requestor: %s", requestor)
 	color.Unset()
 
-	eventInfo := eventinfrastructure.EventInfo{
-		Type:           eventinfrastructure.CORESTATE,
-		EventCause:     eventinfrastructure.USERINPUT,
+	eventInfo := events.EventInfo{
+		Type:           events.CORESTATE,
+		EventCause:     events.USERINPUT,
 		EventInfoKey:   "power",
 		EventInfoValue: "on",
 		Requestor:      requestor,
@@ -70,7 +70,7 @@ func (p *PowerOnDefault) Evaluate(room base.PublicRoom, requestor string) (actio
 					DestinationDevice:   destination,
 					GeneratingEvaluator: "PowerOnDefault",
 					DeviceSpecific:      false,
-					EventLog:            []eventinfrastructure.EventInfo{eventInfo},
+					EventLog:            []events.EventInfo{eventInfo},
 				})
 			}
 		}
@@ -133,7 +133,7 @@ func (p *PowerOnDefault) evaluateDevice(device base.Device,
 	devices []structs.Device,
 	room string,
 	building string,
-	eventInfo eventinfrastructure.EventInfo) ([]base.ActionStructure, error) {
+	eventInfo events.EventInfo) ([]base.ActionStructure, error) {
 
 	// Check if we even need to start anything
 	if strings.EqualFold(device.Power, "on") {
@@ -168,7 +168,7 @@ func (p *PowerOnDefault) evaluateDevice(device base.Device,
 				DestinationDevice:   destination,
 				GeneratingEvaluator: "PowerOnDefault",
 				DeviceSpecific:      true,
-				EventLog:            []eventinfrastructure.EventInfo{eventInfo},
+				EventLog:            []events.EventInfo{eventInfo},
 			})
 		}
 	}

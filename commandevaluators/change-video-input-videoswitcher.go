@@ -7,8 +7,8 @@ import (
 
 	"github.com/byuoitav/av-api/base"
 	"github.com/byuoitav/av-api/dbo"
+	"github.com/byuoitav/common/events"
 	"github.com/byuoitav/configuration-database-microservice/structs"
-	"github.com/byuoitav/event-router-microservice/eventinfrastructure"
 )
 
 /*
@@ -123,9 +123,9 @@ func GetSwitcherAndCreateAction(room base.PublicRoom, device structs.Device, sel
 			m := make(map[string]string)
 			m["output"] = port.Name
 
-			eventInfo := eventinfrastructure.EventInfo{
-				Type:           eventinfrastructure.CORESTATE,
-				EventCause:     eventinfrastructure.USERINPUT,
+			eventInfo := events.EventInfo{
+				Type:           events.CORESTATE,
+				EventCause:     events.USERINPUT,
 				Device:         device.Name,
 				EventInfoKey:   "input",
 				EventInfoValue: selectedInput,
@@ -152,7 +152,7 @@ func GetSwitcherAndCreateAction(room base.PublicRoom, device structs.Device, sel
 				Parameters:          m,
 				DeviceSpecific:      false,
 				Overridden:          false,
-				EventLog:            []eventinfrastructure.EventInfo{eventInfo},
+				EventLog:            []events.EventInfo{eventInfo},
 			}
 
 			return tempAction, nil

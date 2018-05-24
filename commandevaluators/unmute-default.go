@@ -7,7 +7,7 @@ import (
 
 	"github.com/byuoitav/av-api/base"
 	"github.com/byuoitav/av-api/dbo"
-	"github.com/byuoitav/event-router-microservice/eventinfrastructure"
+	"github.com/byuoitav/common/events"
 )
 
 type UnMuteDefault struct {
@@ -17,9 +17,9 @@ func (p *UnMuteDefault) Evaluate(room base.PublicRoom, requestor string) ([]base
 	log.Printf("Evaluating UnMute command.")
 
 	var actions []base.ActionStructure
-	eventInfo := eventinfrastructure.EventInfo{
-		Type:           eventinfrastructure.CORESTATE,
-		EventCause:     eventinfrastructure.USERINPUT,
+	eventInfo := events.EventInfo{
+		Type:           events.CORESTATE,
+		EventCause:     events.USERINPUT,
 		EventInfoKey:   "muted",
 		EventInfoValue: "false",
 		Requestor:      requestor,
@@ -58,7 +58,7 @@ func (p *UnMuteDefault) Evaluate(room base.PublicRoom, requestor string) ([]base
 					Device:              device,
 					DestinationDevice:   destination,
 					DeviceSpecific:      false,
-					EventLog:            []eventinfrastructure.EventInfo{eventInfo},
+					EventLog:            []events.EventInfo{eventInfo},
 				})
 
 			}
@@ -94,7 +94,7 @@ func (p *UnMuteDefault) Evaluate(room base.PublicRoom, requestor string) ([]base
 				Device:              device,
 				DestinationDevice:   destination,
 				DeviceSpecific:      true,
-				EventLog:            []eventinfrastructure.EventInfo{eventInfo},
+				EventLog:            []events.EventInfo{eventInfo},
 			})
 
 		}

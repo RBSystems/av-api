@@ -21,7 +21,7 @@ import (
 	"github.com/byuoitav/av-api/dbo"
 	"github.com/byuoitav/configuration-database-microservice/structs"
 
-	ei "github.com/byuoitav/event-router-microservice/eventinfrastructure"
+	ei "github.com/byuoitav/common/events"
 )
 
 type SetVolumeDSP struct{}

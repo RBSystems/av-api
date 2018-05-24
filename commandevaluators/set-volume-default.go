@@ -8,7 +8,7 @@ import (
 
 	"github.com/byuoitav/av-api/base"
 	"github.com/byuoitav/av-api/dbo"
-	"github.com/byuoitav/event-router-microservice/eventinfrastructure"
+	"github.com/byuoitav/common/events"
 )
 
 type SetVolumeDefault struct {
@@ -19,9 +19,9 @@ func (*SetVolumeDefault) Evaluate(room base.PublicRoom, requestor string) ([]bas
 
 	var actions []base.ActionStructure
 
-	eventInfo := eventinfrastructure.EventInfo{
-		Type:         eventinfrastructure.CORESTATE,
-		EventCause:   eventinfrastructure.USERINPUT,
+	eventInfo := events.EventInfo{
+		Type:         events.CORESTATE,
+		EventCause:   events.USERINPUT,
 		EventInfoKey: "volume",
 		Requestor:    requestor,
 	}
@@ -62,7 +62,7 @@ func (*SetVolumeDefault) Evaluate(room base.PublicRoom, requestor string) ([]bas
 					Device:              device,
 					DestinationDevice:   destination,
 					DeviceSpecific:      false,
-					EventLog:            []eventinfrastructure.EventInfo{eventInfo},
+					EventLog:            []events.EventInfo{eventInfo},
 				})
 
 			}
@@ -106,7 +106,7 @@ func (*SetVolumeDefault) Evaluate(room base.PublicRoom, requestor string) ([]bas
 					DestinationDevice:   destination,
 					DeviceSpecific:      true,
 					Parameters:          parameters,
-					EventLog:            []eventinfrastructure.EventInfo{eventInfo},
+					EventLog:            []events.EventInfo{eventInfo},
 				})
 
 			}

@@ -7,7 +7,7 @@ import (
 
 	"github.com/byuoitav/av-api/base"
 	"github.com/byuoitav/av-api/dbo"
-	"github.com/byuoitav/event-router-microservice/eventinfrastructure"
+	"github.com/byuoitav/common/events"
 )
 
 type UnBlankDisplayDefault struct {
@@ -18,9 +18,9 @@ func (p *UnBlankDisplayDefault) Evaluate(room base.PublicRoom, requestor string)
 
 	var actions []base.ActionStructure
 
-	eventInfo := eventinfrastructure.EventInfo{
-		Type:           eventinfrastructure.CORESTATE,
-		EventCause:     eventinfrastructure.USERINPUT,
+	eventInfo := events.EventInfo{
+		Type:           events.CORESTATE,
+		EventCause:     events.USERINPUT,
 		EventInfoKey:   "blanked",
 		EventInfoValue: "false",
 		Requestor:      requestor,
@@ -58,7 +58,7 @@ func (p *UnBlankDisplayDefault) Evaluate(room base.PublicRoom, requestor string)
 					Device:              device,
 					DestinationDevice:   destination,
 					DeviceSpecific:      false,
-					EventLog:            []eventinfrastructure.EventInfo{eventInfo},
+					EventLog:            []events.EventInfo{eventInfo},
 				})
 			}
 
@@ -92,7 +92,7 @@ func (p *UnBlankDisplayDefault) Evaluate(room base.PublicRoom, requestor string)
 				Device:              device,
 				DestinationDevice:   destination,
 				DeviceSpecific:      true,
-				EventLog:            []eventinfrastructure.EventInfo{eventInfo},
+				EventLog:            []events.EventInfo{eventInfo},
 			})
 
 		}
