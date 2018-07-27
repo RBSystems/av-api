@@ -5,6 +5,7 @@ import (
 
 	"github.com/byuoitav/av-api/base"
 	"github.com/byuoitav/av-api/dbo"
+	"github.com/byuoitav/common/nerr"
 	"github.com/byuoitav/configuration-database-microservice/structs"
 )
 
@@ -18,12 +19,12 @@ type CommandEvaluator interface {
 			actions based on the contents of the struct. It also returns the number of status
 			that will be needed
 	*/
-	Evaluate(base.PublicRoom, string) ([]base.ActionStructure, int, error)
+	Evaluate(base.PublicRoom, string) ([]base.ActionStructure, int, *nerr.E)
 	/*
 		  Validate takes an action structure (for the command) and validates
 			that the device and parameter are valid for the command.
 	*/
-	Validate(base.ActionStructure) error
+	Validate(base.ActionStructure) *nerr.E
 	/*
 			   GetIncompatableActions returns a list of commands that are incompatable
 		     with this one (i.e. 'standby' and 'power on', or 'mute' and 'volume up')
